@@ -6,8 +6,7 @@ intents:
 - mood_great
 - mood_unhappy
 - restaurant_search
-- got_location
-- got_cuisine
+
 templates:
   utter_greet:
   - text: Hey! How are you?
@@ -20,11 +19,7 @@ templates:
   - text: Great carry on!
   utter_ask_location:
   - text: Please share your location....
-  utter_ask_cuisine:
-  - text: Please tell me what kind of cuisine you are looking for...
-  utter_show_restaurants:
-  - text: "Hey these are some of the top rated restaurants nearby \n (1)pista house\
-      \  \n (2)Gal punjab di \n (3)Delhi 39 \n (4)bahar cafe \n (5)mcdonalds "
+  
   utter_affirm:
   - text: "Thanks for sharing the location, please give me some time to find out...\
       \ \n"
@@ -38,5 +33,4 @@ actions:
 - utter_goodbye
 - utter_affirm
 - utter_ask_location
-- utter_ask_cuisine
-- utter_show_restaurants
+

@@ -3,22 +3,13 @@
 -can you help me finding some restaurants
 -show some restaurants
 -find some restaurants
+-get me some restaurants in  my area
+-give me a list of restaurants 
+-get me some food points
+-looking for some food stalls
+-find me some food points
 
-## intent:got_location
--delhi
--bangalore
--hyderabad
--madhapur
--hitech city
 
-## intent:got_cuisine
--chinese
--thai
--north indian
--south indian
--punjabi
--gujrati
--italian
 
 
 ## intent:greet
