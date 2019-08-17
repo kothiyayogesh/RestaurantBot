@@ -6,47 +6,56 @@
   - utter_happy
 
 * restaurant_search
-  - utter_ask_location
+  - utter_ask_location_cuisine
 
+* telling_location
+  -action_show_restaurants
 
 * goodbye
   -utter_goodbye
 
-
-## restaurant path 2
-* greet 
-  - utter_greet
-
-* mood_great
-  - utter_happy
-  
-
-* goodbye
-  - utter_goodbye
-
 ## restaurant path 2
 
-* mood_great
-  - utter_happy
-  
+
 * restaurant_search
-  - utter_ask_location
-  
+  - utter_ask_location_cuisine
+
+* telling_location
+  -action_show_restaurants
 
 * goodbye
   - utter_goodbye
 
 
 ## restaurant path 3
-* greet 
-  - utter_greet
-  
+
+* mood_great
+  - utter_happy
+
 * restaurant_search
-  - utter_ask_location
-  
+  - utter_ask_location_cuisine
+
+* telling_location
+  -action_show_restaurants
 
 * goodbye
   - utter_goodbye
+
+
+## restaurant path 4
+* greet 
+  - utter_greet
+
+* restaurant_search
+  - utter_ask_location_cuisine
+
+* telling_location
+  -action_show_restaurants
+
+* goodbye
+  - utter_goodbye
+
+
 
 ## happy path
 * greet

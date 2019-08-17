@@ -6,8 +6,29 @@ intents:
 - mood_great
 - mood_unhappy
 - restaurant_search
+- telling_location
+
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_affirm
+- action_show_restaurants
+- utter_ask_location_cuisine
+
+entities:
+- cuisine
+
+slots:
+  cuisine:
+    type: text
+
 
 templates:
+  
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:
@@ -17,20 +38,14 @@ templates:
   - text: Did that help you?
   utter_happy:
   - text: Great carry on!
-  utter_ask_location:
-  - text: Please share your location....
+  
+  utter_ask_location_cuisine:
+  - text: Please share your location....and cuisine.
   
   utter_affirm:
   - text: "Thanks for sharing the location, please give me some time to find out...\
       \ \n"
+  
   utter_goodbye:
   - text: Bye
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_affirm
-- utter_ask_location
 

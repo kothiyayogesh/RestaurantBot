@@ -10,7 +10,40 @@
 -find me some food points
 
 
-
+## intent:telling_location
+<!-- -i am looking for [italian](cuisine) food in delhi
+-i am looking for [italian](cuisine) food in mumbai
+-i am looking for [italian](cuisine) food in chennai
+-i am looking for [italian](cuisine) food in gurgaon
+-i am looking for [chinese](cuisine) food in hyderabad
+-i am looking for [chinese](cuisine) food in delhi
+-i am looking for [chinese](cuisine) food in mumbai
+-i am looking for [chinese](cuisine) food in chennai
+-i am looking for [thai](cuisine) food in gurgaon
+-i am looking for [thai](cuisine) food in hyderbad
+-i am looking for [italian](cuisine) food in bangalore
+-i am looking for [mexican](cuisine) food in delhi
+-i am looking for [mexican](cuisine) food in mumbai	
+-i am looking for [mexican](cuisine) food in chennai
+-i am looking for [south indian](cuisine) food in gurgaon
+-i am looking for [north indian](cuisine) food in hyderbad
+-i am looking for [north indian](cuisine) food in bangalore -->
+-looking for [italian](cuisine) restaurants in delhi
+-looking for [italian](cuisine) food points in mumbai
+-looking for [italian](cuisine) stalls in chennai
+-i would like to have [italian](cuisine) food in gurgaon
+-i would like to eat [arabian](cuisine) food in hyderabad
+-i would like to eat [north indian](cuisine) food in delhi
+-i would like to eat [south indian](cuisine) food in mumbai
+-i would like to have [chinese](cuisine) food in chennai
+-[italian](cuisine) food in delhi
+-[italian](cuisine) food in mumbai
+-[italian](cuisine) food in chennai
+-[italian](cuisine) food in gurgaon
+-[chinese](cuisine) food in hyderabad
+-[chinese](cuisine) food in delhi
+-[chinese](cuisine) food in mumbai
+-[chinese](cuisine) food in chennai
 
 ## intent:greet
 - hey
