@@ -6,18 +6,27 @@ intents:
 - mood_great
 - mood_unhappy
 - restaurant_search
+- telling_location_cuisine
 - telling_location
-
+- telling_cuisine 
 
 actions:
 - utter_greet
-- utter_cheer_up
 - utter_did_that_help
-- utter_happy
 - utter_goodbye
-- utter_affirm
-- action_show_restaurants
+- utter_affirm_info
+- utter_affirm_location
+- utter_assist
+- utter_ask_location
+- utter_ask_cuisine
 - utter_ask_location_cuisine
+- action_show_restaurants
+- action_set_location
+- action_set_cuisine
+- action_get_cuisine_show_restaurants
+
+
+
 
 entities:
 - cuisine
@@ -26,26 +35,36 @@ slots:
   cuisine:
     type: text
 
+  location:
+    type: text
+
 
 templates:
-  
   utter_greet:
   - text: Hey! How are you?
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  
   utter_did_that_help:
   - text: Did that help you?
-  utter_happy:
-  - text: Great carry on!
+  
+  utter_assist:
+  - text: Great ! How may i assist you?
   
   utter_ask_location_cuisine:
-  - text: Please share your location....and cuisine.
+  - text: Please share your location and cuisine.
   
-  utter_affirm:
-  - text: "Thanks for sharing the location, please give me some time to find out...\
-      \ \n"
-  
+  utter_ask_location:
+  - text: Please share your location.
+
+  utter_ask_cuisine:
+  - text: Please share your cuisine.
+
+  utter_affirm_info:
+  - text: Thanks for sharing the valuable information, please give me some time to find out... \n
+
+  utter_affirm_location:
+  - text: Thanks for sharing your location..
+ 
   utter_goodbye:
   - text: Bye
+
 
