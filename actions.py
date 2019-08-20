@@ -30,7 +30,8 @@ class ActionSetLocation(Action):
 
     def extractLocation(self,text):
         list_cities=[]
-        params={"token":api_token,"min_confidence":0.8}
+        params={"token":api_token,"min_confidence":0.7,"lang":"en"}
+
         r=requests.get(base_url_dandelion+"?text="+text+"&include=types%2Cabstract%2Ccategories",params)
         all_locations=r.json()
         
@@ -247,7 +248,7 @@ class ActionHelloWorld(Action):
 
     def extractLocation(self,text):
         list_cities=[]
-        params={"token":api_token,"min_confidence":0.8}
+        params={"token":api_token,"min_confidence":0.8,"lang":"en"}
         r=requests.get(base_url_dandelion+"?text="+text+"&include=types%2Cabstract%2Ccategories",params)
         all_locations=r.json()
         
