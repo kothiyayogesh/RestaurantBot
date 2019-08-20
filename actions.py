@@ -12,7 +12,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import requests
 import ast
-from rasa_core_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet
 
 
 api_key="68d8d61fb2aaf00ee69e723b5fc570e7"

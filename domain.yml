@@ -8,8 +8,34 @@ intents:
 - restaurant_search
 - telling_location_cuisine
 - telling_location
-- telling_cuisine 
-
+- telling_cuisine
+entities:
+- cuisine
+slots:
+  cuisine:
+    type: text
+  location:
+    type: text
+templates:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_assist:
+  - text: Great ! How may i assist you?
+  utter_ask_location_cuisine:
+  - text: Please share your location and cuisine.
+  utter_ask_location:
+  - text: Please share your location.
+  utter_ask_cuisine:
+  - text: Please share your cuisine.
+  utter_affirm_info:
+  - text: Thanks for sharing the valuable information, please give me some time to
+      find out... \n
+  utter_affirm_location:
+  - text: Thanks for sharing your location..
+  utter_goodbye:
+  - text: Bye
 actions:
 - utter_greet
 - utter_did_that_help
@@ -24,47 +50,3 @@ actions:
 - action_set_location
 - action_set_cuisine
 - action_get_cuisine_show_restaurants
-
-
-
-
-entities:
-- cuisine
-
-slots:
-  cuisine:
-    type: text
-
-  location:
-    type: text
-
-
-templates:
-  utter_greet:
-  - text: Hey! How are you?
-  
-  utter_did_that_help:
-  - text: Did that help you?
-  
-  utter_assist:
-  - text: Great ! How may i assist you?
-  
-  utter_ask_location_cuisine:
-  - text: Please share your location and cuisine.
-  
-  utter_ask_location:
-  - text: Please share your location.
-
-  utter_ask_cuisine:
-  - text: Please share your cuisine.
-
-  utter_affirm_info:
-  - text: Thanks for sharing the valuable information, please give me some time to find out... \n
-
-  utter_affirm_location:
-  - text: Thanks for sharing your location..
- 
-  utter_goodbye:
-  - text: Bye
-
-
