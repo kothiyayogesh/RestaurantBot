@@ -64,25 +64,21 @@ class ActionSetCuisine(Action):
 
 
         #city name should not contain numerics...
-        if city_name.isalpha() == False:
-            raise ValueError('InvalidCityName')
-
         city_name = city_name.split(' ')
         city_name = '%20'.join(city_name)
+        print(city_name)
         headers = {'Accept': 'application/json', 'user-key': api_key}
-        r = (requests.get(base_url + "cities?q=" + city_name, headers=headers).content).decode("utf-8")
-        a = ast.literal_eval(r)
+        r = requests.get(base_url + "cities?q=" + city_name, headers=headers)
+        #a = ast.literal_eval(r)
+        data=r.json()
+        #print(data['location_suggestions'][0]['id'])
 
         #if there is no such city....it should be an invalid city name...
-        if len(a['location_suggestions']) == 0:
+        if len(data['location_suggestions']) == 0:
             raise Exception('invalid_city_name')
-
-        elif 'name' in a['location_suggestions'][0]:
-            city_name = city_name.replace('%20', ' ')
-        if str(a['location_suggestions'][0]['name']).lower() == str(city_name).lower():
-            return a['location_suggestions'][0]['id']
+            
         else:
-            raise ValueError('InvalidCityId')
+            return data['location_suggestions'][0]['id']
 
 
     def get_cuisines(self, city_ID):
@@ -170,26 +166,21 @@ class ActionHelloWorld(Action):
 
 
         #city name should not contain numerics...
-        if city_name.isalpha() == False:
-            raise ValueError('InvalidCityName')
-
         city_name = city_name.split(' ')
         city_name = '%20'.join(city_name)
+        print(city_name)
         headers = {'Accept': 'application/json', 'user-key': api_key}
-        r = (requests.get(base_url + "cities?q=" + city_name, headers=headers).content).decode("utf-8")
-        a = ast.literal_eval(r)
+        r = requests.get(base_url + "cities?q=" + city_name, headers=headers)
+        #a = ast.literal_eval(r)
+        data=r.json()
+        #print(data['location_suggestions'][0]['id'])
 
         #if there is no such city....it should be an invalid city name...
-        if len(a['location_suggestions']) == 0:
+        if len(data['location_suggestions']) == 0:
             raise Exception('invalid_city_name')
-
-        elif 'name' in a['location_suggestions'][0]:
-            city_name = city_name.replace('%20', ' ')
-        if str(a['location_suggestions'][0]['name']).lower() == str(city_name).lower():
-            return a['location_suggestions'][0]['id']
+            
         else:
-            raise ValueError('InvalidCityId')
-
+            return data['location_suggestions'][0]['id']
 
     def get_cuisines(self, city_ID):
         """
@@ -248,7 +239,7 @@ class ActionHelloWorld(Action):
 
     def extractLocation(self,text):
         list_cities=[]
-        params={"token":api_token,"min_confidence":0.8,"lang":"en"}
+        params={"token":api_token,"min_confidence":0.7,"lang":"en"}
         r=requests.get(base_url_dandelion+"?text="+text+"&include=types%2Cabstract%2Ccategories",params)
         all_locations=r.json()
         
