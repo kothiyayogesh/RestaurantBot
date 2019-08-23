@@ -36,6 +36,15 @@ templates:
   - text: Thanks for sharing your location..
   utter_goodbye:
   - text: Bye
+  utter_default:
+  - text: Sorry I can't identify your current location. Hence can't help you without
+      a location. Please type the location so that I can help you to find restaurant
+  utter_sorry:
+  - text: sorry i may not help you without your location.Kindly find your location
+      with some person near to you.Thanks have a nice day
+  utter_itsok:
+  - text: It's completely fine ,i will try to fetch all types of restaurants.Choose
+      among them
 actions:
 - utter_greet
 - utter_did_that_help
@@ -50,3 +59,7 @@ actions:
 - action_set_location
 - action_set_cuisine
 - action_get_cuisine_show_restaurants
+- utter_default
+- utter_sorry
+- action_restaurants_nocuisine
+- utter_itsok

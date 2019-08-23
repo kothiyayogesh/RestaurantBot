@@ -9,6 +9,11 @@
 - yes thanks a lot
 - yes it helped a lot..thanks
 - yes it did,thanks a lot
+- yup thanks
+- yes thanks
+- yes it did
+- na
+- its ok
 
 ## intent:deny
 - no
@@ -17,6 +22,28 @@
 - don't like that
 - no way
 - not really
+- i dont know about my location
+- i am not sure of my location
+- i dont know
+- i am new here
+- i dont know what exactly this place is
+- no  idea
+- not sure
+- can you help me with location i am new here
+- nopes
+- i dont know the location
+- i am not sure of my location yet
+- i am not sure
+- i am not sure about it
+- i am not sure actually
+- actually i am new here so i dont know location
+- please help me without cuisine
+- no idea
+- not sure about my cuisine
+- dont know about cuisine
+- i dont have any idea
+- no idea about that
+- no idea about it
 
 ## intent:goodbye
 - bye
@@ -78,6 +105,8 @@
 - iam fine
 - i am good
 - i am doing great
+- i am great what about you
+- good
 
 ## intent:mood_unhappy
 - sad
@@ -117,6 +146,22 @@
 - please help me find some restaurants
 - get me some restaurants near by
 - get me some restaurants near me
+- i am hungry get me some restaurants near by
+- please get me some restaurants near by
+- please get me a list of all restaurants near by
+- please get me all the restaurants near by
+- please give me a list of restaurants
+- get me a list of restaurants
+- please find me some restaurants
+- please get me a list of all restaurants
+- get me a list of all restaurants near to me
+- tell me some restaurants here
+- i am hungry please tell me some restaurants near to me
+- i want to eat something please tell me some location near by
+- please tell me some food points here
+- get me some restaurants neary by
+- get me some food points
+- find some food places near to me
 
 ## intent:telling_cuisine
 - i would prefer to eat [mexican](cuisine)
@@ -147,6 +192,11 @@
 - i would love to eat [chinese](cuisine) food
 - i would love to eat [chinese](cuisine)
 - i would love to eat [north indian](cuisine) food
+- [italian](cuisine)
+- [chinese](cuisine)
+- thai
+- i will prefer to eat [chinese](cuisine) food
+- i would love to eat [italian](cuisine) food
 
 ## intent:telling_location
 - my preffered location will be bengaluru
@@ -171,6 +221,13 @@
 - my location will be hyderabad
 - my location will be kerala
 - my location is mumbai
+- mumbai
+- delhi
+- my location will be in chennai
+- i think i am near to hyderabad
+- i am near to mumbai
+- chennai
+- punjab
 
 ## intent:telling_location_cuisine
 - i am looking for some [chinese](cuisine) food in mumbai
@@ -202,3 +259,15 @@
 - i am looking to eat some [italian](cuisine) food in mumbai
 - i am looking for some [italian](cuisine) food in chennai
 - i am looking to eat something [chinese](cuisine) in hyderabad
+- i am looking for [italian](cuisine) food in madhapur
+- i am looking to eat [italian](cuisine) food in mumbai
+- i would like to eat [north indian](cuisine) food in hyderabad
+- i would like to eat [chinese](cuisine) food in hyderabad
+- i would like to eat [chinese](cuisine) in hyderabad
+- i would like to eat [italian](cuisine) in hyderabad
+- i am looking to eat [italian](cuisine) food in delhi
+- would like to eat [italian](cuisine) food in hyderabad
+- i would like to eat [italian](cuisine) food in delhi
+- i am looking to eat some [italian](cuisine) food in chennai
+- i am looking to eat some [italian](cuisine) food in kerala
+- i would love to have [chinese](cuisine) food in chennai
