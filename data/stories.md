@@ -123,7 +123,7 @@
     - utter_assist
 * restaurant_search
     - utter_ask_location
-* location_cuisine_notsure
+* location_cuisine_notsures
     - action_default_fallback
 * telling_location
     - action_set_location

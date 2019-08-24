@@ -22,6 +22,8 @@
 - don't like that
 - no way
 - not really
+
+## intent:location_cuisine_notsure
 - i dont know about my location
 - i am not sure of my location
 - i dont know
