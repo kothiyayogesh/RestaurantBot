@@ -9,6 +9,7 @@ intents:
 - telling_location_cuisine
 - telling_location
 - telling_cuisine
+- location_cuisine_notsure
 entities:
 - cuisine
 slots:
