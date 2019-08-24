@@ -123,7 +123,7 @@
     - utter_assist
 * restaurant_search
     - utter_ask_location
-* deny
+* location_cuisine_notsure
     - action_default_fallback
 * telling_location
     - action_set_location
@@ -141,7 +141,7 @@
 
 * restaurant_search
     - utter_ask_location
-* deny
+* location_cuisine_notsure
     - action_default_fallback
 * telling_location
     - action_set_location
@@ -163,9 +163,9 @@
     - utter_assist
 * restaurant_search
     - utter_ask_location
-* deny
+* location_cuisine_notsure
     - action_default_fallback
-* deny
+* location_cuisine_notsure
     - utter_sorry
 * affirm
     - utter_goodbye
@@ -183,7 +183,7 @@
     - slot{"location":"Punjab"}
     - utter_affirm_location
     - utter_ask_cuisine
-* deny
+* location_cuisine_notsure
     - utter_itsok
     - action_restaurants_nocuisine
     - utter_did_that_help
