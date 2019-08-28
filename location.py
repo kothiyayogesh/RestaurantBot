@@ -13,7 +13,7 @@ class LocationExtractor(Component):
     def __init__(self, component_config=None):
         self.api_token = "c596f13460364db9915e6f3f98ffdac2"
         self.base_url = "https://api.dandelion.eu/datatxt/nex/v1/"
-        self.min_confidence = 0.7
+        self.min_confidence = 0.6
         super(LocationExtractor, self).__init__(component_config)
 
     def train(self, training_data, cfg, **kwargs):

@@ -8,6 +8,7 @@ import requests
 import ast
 
 
+
 class Zomato:
 
     def __init__(self):
@@ -32,18 +33,29 @@ class Zomato:
         else:
             return data['location_suggestions'][0]['entity_id']
 
+
+
+
     def get_cuisines(self, entity_id):
         """
         Takes City ID as input.
         Returns dictionary of all cuisine names and their respective cuisine IDs in a given city.
         """
 
+        #import requests
+        #    url = 'https://developers.zomato.com/api/v2.1/cuisines?city_id={{city_id}}&lat={{latitude}}&lon={{longitude}}'
+         #   payload = {}
+         #   headers = {
+         #       'user-key': '{{Zomato API Key}}'
+         #   }
+          #  response = requests.request('GET', url, headers = headers, data = payload, allow_redirects=False, timeout=undefined, allow_redirects=false)
+          #  print(response.text)
+
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
         queryString={"city_id":entity_id}
         r = (requests.get(self.base_url +"cuisines",params=queryString,headers=headers).content).decode("utf-8")
         a = ast.literal_eval(r)
-        all_cuisines_in_a_city=a['cuisines']
-
+        all_cuisines_in_a_city = a['cuisines']
 
         cuisines={}
 
@@ -60,7 +72,7 @@ class Zomato:
         Takes cuisine name and city id as argument.
         Returns the cuisine id for that cuisine.
         '''
-        cusines=self.get_cuisines(entity_id)
+        cusines = self.get_cuisines(entity_id)
         return cusines[cuisine_name.lower()]
 
 
@@ -152,10 +164,11 @@ class ActionSetCuisine_showRestaurants(Action):
         zom=Zomato()
 
         list_all_restaurants=zom.get_all_restraunts(location_name,str(cuisine_type))
-        
+        #if (list_all_restaurants == null):
+        #    dispatcher.utter_message("No items available")
+        #else:
         for r in list_all_restaurants:
             dispatcher.utter_message(r)
-
         return []
  
 
@@ -198,10 +211,26 @@ class ActionShowRestaurants(Action):
         print(user_input)
         print(cuisine_type)
         print(location_name)
-        list_all_restaurants=zo.get_all_restraunts(location_name[0],str(cuisine_type))
-        
+        list_all_restaurants=zo.get_all_restraunts(location_name,str(cuisine_type))
+        #if(list_all_restaurants == null):
+        #    dispatcher.utter_message("No Items available")
+        #else:
         for r in list_all_restaurants:
             dispatcher.utter_message(r)
 
         return []
+
+
+
+
         
+class ActionDefaultFallback(Action):
+    
+
+    def name(self):
+      return "action_default_fallback"
+
+    def run(self, dispatcher, tracker, domain):
+
+      dispatcher.utter_message("Sorry, I couldn't understand.Please enter again.")
+      

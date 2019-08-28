@@ -1,66 +1,75 @@
+%YAML 1.1
+---
+actions:
+- action_default_fallback
+- action_get_cuisine_show_restaurants
+- action_restaurants_nocuisine
+- action_set_cuisine
+- action_set_location
+- action_show_restaurants
+- utter_affirm_info
+- utter_affirm_location
+- utter_ask_cuisine
+- utter_ask_location
+- utter_ask_location_cuisine
+- utter_assist
+- utter_default
+- utter_did_that_help
+- utter_fallback
+- utter_goodbye
+- utter_greet
+- utter_itsok
+- utter_sorry
+entities:
+- cuisine
+- location
 intents:
+- deny
+- telling_location_cuisine
+- fallback
+- telling_location
+- restaurant_search
 - greet
 - goodbye
 - affirm
-- deny
 - mood_great
 - mood_unhappy
-- restaurant_search
-- telling_location_cuisine
-- telling_location
 - telling_cuisine
-- location_cuisine_notsure
-entities:
-- cuisine
 slots:
   cuisine:
     type: text
   location:
     type: text
 templates:
-  utter_greet:
-  - text: Hey! How are you?
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_assist:
-  - text: Great ! How may i assist you?
-  utter_ask_location_cuisine:
-  - text: Please share your location and cuisine.
-  utter_ask_location:
-  - text: Please share your location.
+  utter_affirm_info:
+  - text: Thanks for sharing information, please give me some time to find out...
+  - text: On my way,searching restaurants for you.
+  utter_affirm_location:
+  - text: Thanks for sharing your location..fetching some cuisine for you please wait.
   utter_ask_cuisine:
   - text: Please share your cuisine.
-  utter_affirm_info:
-  - text: Thanks for sharing the valuable information, please give me some time to
-      find out... \n
-  utter_affirm_location:
-  - text: Thanks for sharing your location..
-  utter_goodbye:
-  - text: Bye
+  utter_ask_location:
+  - text: Please share your location.
+  utter_ask_location_cuisine:
+  - text: Please share your location and cuisine.
+  utter_assist:
+  - text: Great ! How may i assist you?
+  - text: Great ! What can I help you with?
   utter_default:
   - text: Sorry I can't identify your current location. Hence can't help you without
       a location. Please type the location so that I can help you to find restaurant
-  utter_sorry:
-  - text: sorry i may not help you without your location.Kindly find your location
-      with some person near to you.Thanks have a nice day
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_fallback:
+  - text: Sorry I couldn't understand.Please enter valid data.
+  - text: What do you mean?Sorry I couldn't understand.
+  utter_goodbye:
+  - text: Bye.Have a nice day.
+  utter_greet:
+  - text: Hey! How are you?
   utter_itsok:
   - text: It's completely fine ,i will try to fetch all types of restaurants.Choose
       among them
-actions:
-- utter_greet
-- utter_did_that_help
-- utter_goodbye
-- utter_affirm_info
-- utter_affirm_location
-- utter_assist
-- utter_ask_location
-- utter_ask_cuisine
-- utter_ask_location_cuisine
-- action_show_restaurants
-- action_set_location
-- action_set_cuisine
-- action_get_cuisine_show_restaurants
-- utter_default
-- utter_sorry
-- action_restaurants_nocuisine
-- utter_itsok
+  utter_sorry:
+  - text: sorry i may not help you without your location.Kindly find your location
+      with some person near to you.Thanks have a nice day
