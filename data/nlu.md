@@ -22,8 +22,6 @@
 - don't like that
 - no way
 - not really
-
-## intent:location_cuisine_notsure
 - i dont know about my location
 - i am not sure of my location
 - i dont know
@@ -46,6 +44,10 @@
 - i dont have any idea
 - no idea about that
 - no idea about it
+- i am not sure about my location
+- actually i really dont know i am new here
+- actually i really don't know please help withut location
+- i am new here i dont know location yet
 
 ## intent:goodbye
 - bye
@@ -109,6 +111,7 @@
 - i am doing great
 - i am great what about you
 - good
+- i m fine
 
 ## intent:mood_unhappy
 - sad
@@ -164,6 +167,8 @@
 - get me some restaurants neary by
 - get me some food points
 - find some food places near to me
+- get me some restaurants near to me
+- i am looking for some food points
 
 ## intent:telling_cuisine
 - i would prefer to eat [mexican](cuisine)
@@ -199,6 +204,10 @@
 - thai
 - i will prefer to eat [chinese](cuisine) food
 - i would love to eat [italian](cuisine) food
+- african
+- australian
+- i will prefer australian then
+- i will prefer australian
 
 ## intent:telling_location
 - my preffered location will be bengaluru
@@ -230,6 +239,9 @@
 - i am near to mumbai
 - chennai
 - punjab
+- i am looking in borivali
+- i am living in borivali
+- my location will be in borivali
 
 ## intent:telling_location_cuisine
 - i am looking for some [chinese](cuisine) food in mumbai

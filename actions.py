@@ -4,6 +4,8 @@ from rasa_sdk.executor import CollectingDispatcher
 import requests
 import ast
 from rasa_sdk.events import SlotSet
+from rasa_sdk.events import UserUtteranceReverted
+
 import requests
 import ast
 
@@ -126,7 +128,7 @@ class LocationExtractor:
     
     def extractLocation(self,text):
         list_cities=[]
-        params={"token":self.api_token,"min_confidence":0.7,"lang":"en"}
+        params={"token":self.api_token,"min_confidence":0.75,"lang":"en"}
         r=requests.get(self.base_url+"?text="+text+"&include=types%2Cabstract%2Ccategories",params)
         all_locations=r.json()
         
@@ -217,3 +219,25 @@ class ActionShowRestaurants(Action):
 
         return []
         
+class ActionLocationDenied(Action):
+
+    def name(self):
+        return "action_location_denied"
+
+
+    def run(self,dispatcher,tracker,domain):
+
+        dispatcher.utter_message("Sorry i can't help without the location...please ask someone near you about your current location")
+        return []
+
+
+
+
+class ActionTryAgain(Action):
+
+    def name(self):
+        return "action_try_Aftersometime"
+
+
+    def run(self,dispatcher,tracker,domain):
+        dispatcher.utter_message("Sorry can't help without your location,try after some time once you have the idea about location")

@@ -1,0 +1,322 @@
+[
+  {
+    "text": "please help me without cuisine",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "restaurant_search",
+      "confidence": 0.49157477548513034
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5111131241855262
+    }
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.4686254759211281
+    }
+  },
+  {
+    "text": "my choice will be arabian",
+    "intent": "telling_cuisine",
+    "intent_prediction": {
+      "name": "telling_location",
+      "confidence": 0.5338016359460536
+    }
+  },
+  {
+    "text": "looking to eat in hyderabad",
+    "intent": "telling_location",
+    "intent_prediction": {
+      "name": "telling_location_cuisine",
+      "confidence": 0.5492861739063527
+    }
+  },
+  {
+    "text": "no  idea",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2972588929701658
+    }
+  },
+  {
+    "text": "bye tc",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.35712881394937174
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3200513372801588
+    }
+  },
+  {
+    "text": "goodbye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3117667972478808
+    }
+  },
+  {
+    "text": "bbye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2738451635867795
+    }
+  },
+  {
+    "text": "i am fine",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "restaurant_search",
+      "confidence": 0.3115303329956345
+    }
+  },
+  {
+    "text": "thai",
+    "intent": "telling_cuisine",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.359019985859874
+    }
+  },
+  {
+    "text": "get me some food in hyderabad",
+    "intent": "telling_location",
+    "intent_prediction": {
+      "name": "telling_location_cuisine",
+      "confidence": 0.43031906387981733
+    }
+  },
+  {
+    "text": "see you around",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "restaurant_search",
+      "confidence": 0.40833389878295784
+    }
+  },
+  {
+    "text": "very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5753341278640365
+    }
+  },
+  {
+    "text": "awful",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5178634664279441
+    }
+  },
+  {
+    "text": "i am hungry",
+    "intent": "restaurant_search",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6191696083611756
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7632802905118918
+    }
+  },
+  {
+    "text": "perfect",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "telling_cuisine",
+      "confidence": 0.4487151272425079
+    }
+  },
+  {
+    "text": "i am great what about you",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2931606180104248
+    }
+  },
+  {
+    "text": "i want to eat something please tell me some location near by",
+    "intent": "restaurant_search",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.41826562126667294
+    }
+  },
+  {
+    "text": "nopes",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.27076136465839146
+    }
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.496873283070491
+    }
+  },
+  {
+    "text": "i am doing great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "restaurant_search",
+      "confidence": 0.2969325114655729
+    }
+  },
+  {
+    "text": "very bad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.42473957370037557
+    }
+  },
+  {
+    "text": "delhi",
+    "intent": "telling_location",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6169978236213759
+    }
+  },
+  {
+    "text": "i am new here",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.38444681521778856
+    }
+  },
+  {
+    "text": "bbye take care",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "telling_location",
+      "confidence": 0.41796242467647315
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5455177186293121
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.4261132435782212
+    }
+  },
+  {
+    "text": "terrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6454080650956651
+    }
+  },
+  {
+    "text": "hey can you help me to find some restaurants nearby",
+    "intent": "restaurant_search",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.38514371207761466
+    }
+  },
+  {
+    "text": "will eat thai in hyderabad",
+    "intent": "telling_location_cuisine",
+    "intent_prediction": {
+      "name": "telling_location",
+      "confidence": 0.4562503263021272
+    }
+  },
+  {
+    "text": "bbye nice talking to you",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.26091203788198947
+    }
+  },
+  {
+    "text": "looking for some food points",
+    "intent": "restaurant_search",
+    "intent_prediction": {
+      "name": "telling_location_cuisine",
+      "confidence": 0.4166711731339391
+    }
+  },
+  {
+    "text": "please give me some thai food",
+    "intent": "telling_cuisine",
+    "intent_prediction": {
+      "name": "restaurant_search",
+      "confidence": 0.48581631086499416
+    }
+  },
+  {
+    "text": "hyderabad",
+    "intent": "telling_location",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.35516864985913654
+    }
+  },
+  {
+    "text": "punjab",
+    "intent": "telling_location",
+    "intent_prediction": {
+      "name": "telling_cuisine",
+      "confidence": 0.21227952788692803
+    }
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7102814692270221
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4738288794154452
+    }
+  }
+]
