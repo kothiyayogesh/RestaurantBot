@@ -85,7 +85,7 @@ class Zomato:
         print(location_info)
         print(cuisine_id)
 
-        queryString={"entity_type":location_info[3],"entity_id":location_info[2],"cuisines":cuisine_id}
+        queryString={"entity_type":location_info[3],"entity_id":location_info[2],"cuisines":cuisine_id,"count":5}
 
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
         r =requests.get(self.base_url + "search",params=queryString, headers=headers)
@@ -105,7 +105,7 @@ class Zomato:
         '''
         location_info=self.getLocationInfo(location)
         
-        queryString={"entity_type":location_info[3],"entity_id":location_info[2]}
+        queryString={"entity_type":location_info[3],"entity_id":location_info[2],"count":5}
 
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
         r =requests.get(self.base_url + "search",params=queryString, headers=headers)
@@ -219,25 +219,5 @@ class ActionShowRestaurants(Action):
 
         return []
         
-class ActionLocationDenied(Action):
 
-    def name(self):
-        return "action_location_denied"
-
-
-    def run(self,dispatcher,tracker,domain):
-
-        dispatcher.utter_message("Sorry i can't help without the location...please ask someone near you about your current location")
-        return []
-
-
-
-
-class ActionTryAgain(Action):
-
-    def name(self):
-        return "action_try_Aftersometime"
-
-
-    def run(self,dispatcher,tracker,domain):
-        dispatcher.utter_message("Sorry can't help without your location,try after some time once you have the idea about location")
+   

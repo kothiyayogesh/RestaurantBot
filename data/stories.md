@@ -2,7 +2,7 @@
 * goodbye
   - utter_goodbye
 
-## Restaurant path 1
+## greet_restaurantSearch_tellingLocation_tellingCuisine
 
 * greet
     - utter_greet
@@ -23,7 +23,7 @@
     - utter_goodbye
 * goodbye
 
-## Restaurant path 2
+## greet_tellingLocationCuisine_bye
 
 * greet
     - utter_greet
@@ -35,47 +35,7 @@
     - utter_did_that_help
 * goodbye
 
-## Restaurant path 3
-
-* greet
-    - utter_greet
-* mood_great
-    - utter_assist
-* restaurant_search
-    - utter_ask_location
-* telling_location
-    - utter_affirm_location
-    - action_set_location
-    - slot{"location":"Bangalore"}
-    - utter_ask_cuisine
-* telling_cuisine{"cuisine":"mexican"}
-    - slot{"cuisine":"mexican"}
-    - action_get_cuisine_show_restaurants
-    - utter_did_that_help
-* goodbye
-
-## Restaurant path 4
-
-* greet
-    - utter_greet
-* mood_great
-    - utter_assist
-* restaurant_search
-    - utter_ask_location
-* telling_location
-    - utter_affirm_location
-    - action_set_location
-    - slot{"location":"Mumbai"}
-    - utter_ask_cuisine
-* telling_cuisine{"cuisine":"italian"}
-    - slot{"cuisine":"italian"}
-    - action_get_cuisine_show_restaurants
-    - utter_did_that_help
-* affirm
-    - utter_goodbye
-* goodbye
-
-## Restaurant path 5
+## restaurantSearch_tellingLocation_tellingCuisine
 
 * restaurant_search
     - utter_ask_location
@@ -91,21 +51,7 @@
 * affirm
     - utter_goodbye
 
-## Restaurant path 6
-
-* greet
-    - utter_greet
-* mood_great
-    - utter_assist
-* telling_location_cuisine{"cuisine":"italian"}
-    - slot{"cuisine":"italian"}
-    - utter_affirm_info
-    - action_show_restaurants
-    - utter_did_that_help
-* affirm
-    - utter_goodbye
-
-## Restaurant path 7
+## tellingLocationCuisine
 
 * telling_location_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
@@ -115,7 +61,7 @@
 * affirm
     - utter_goodbye
 
-## error path 1
+## greet_restaurantSearch_tellingLocation_denyLocation_tellingCuisine
 
 * greet
     - utter_greet
@@ -124,7 +70,7 @@
 * restaurant_search
     - utter_ask_location
 * deny
-    - action_location_denied
+    - utter_location_denied
 * telling_location
     - action_set_location
     - slot{"location":"Hyderabad"}
@@ -137,12 +83,12 @@
 * affirm
     - utter_goodbye
 
-## error path 2
+## restaurantSearch_denyLocation_tellingLocation_tellingCuisine
 
 * restaurant_search
     - utter_ask_location
 * deny
-    - action_location_denied
+    - utter_location_denied
 * telling_location
     - action_set_location
     - slot{"location":"Mumbai"}
@@ -155,7 +101,7 @@
 * affirm
     - utter_goodbye
 
-## error story 4
+## greet_restaurantSearch_tellingLocation_denyCuisine_showRestaurantsWithoutCuisine
 
 * greet
     - utter_greet
@@ -175,7 +121,7 @@
 * affirm
     - utter_goodbye
 
-## error story 5
+## greet_restaurantSearch_denyLocation_denyLocation_bye
 
 * greet
     - utter_greet
@@ -183,31 +129,37 @@
     - utter_assist
 * restaurant_search
     - utter_ask_location
+* deny
+    - utter_location_denied
+* deny
+    - utter_tryAfter_sometime
+    - utter_goodbye
+
+## tellingLocation_tellingCuisine
+
 * telling_location
     - action_set_location
-    - slot{"location":"Borivali"}
+    - slot{"location":"Mumbai"}
     - utter_affirm_location
-    - utter_ask_cuisine
-* telling_cuisine{"cuisine":"italian"}
-    - slot{"cuisine":"italian"}
-    - action_get_cuisine_show_restaurants
     - utter_ask_cuisine
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
     - action_get_cuisine_show_restaurants
-    - utter_nosuch_cuisine_all_restaurants
-    - action_restaurants_nocuisine
+    - utter_did_that_help
+* affirm
+    - utter_goodbye
 
-## New Story
+## tellingCuisine_tellingLocation_showRestaurants
 
-* greet
-    - utter_greet
-* mood_great
-    - utter_assist
-* restaurant_search
+* telling_cuisine{"cuisine":"italian"}
+    - slot{"cuisine":"italian"}
+    - utter_affirm_cuisine
     - utter_ask_location
-* deny
-    - action_location_denied
-* deny
-    - action_try_Aftersometime
+* telling_location
+    - action_set_location
+    - slot{"location":"Hyderabad"}
+    - utter_affirm_info
+    - action_show_restaurants
+    - utter_did_that_help
+* affirm
     - utter_goodbye

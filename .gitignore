@@ -108,3 +108,8 @@ venv.bak/
 
 # Rasa models
 models/
+
+# Rasa DB
+*.db
+*.dot
+

@@ -48,6 +48,10 @@
 - actually i really dont know i am new here
 - actually i really don't know please help withut location
 - i am new here i dont know location yet
+- i really dont know
+- i dont know my location
+- dont know
+- not sure actualy
 
 ## intent:goodbye
 - bye
@@ -169,6 +173,8 @@
 - find some food places near to me
 - get me some restaurants near to me
 - i am looking for some food points
+- i am looking for restaurants
+- get me some flight details
 
 ## intent:telling_cuisine
 - i would prefer to eat [mexican](cuisine)
@@ -208,6 +214,7 @@
 - australian
 - i will prefer australian then
 - i will prefer australian
+- i want to eat [italian](cuisine) food
 
 ## intent:telling_location
 - my preffered location will be bengaluru
@@ -242,6 +249,21 @@
 - i am looking in borivali
 - i am living in borivali
 - my location will be in borivali
+- madhapur
+- i am living in madhapur...
+- my location is andheri
+- i am currently living in mumbai
+- i am living near borivali
+- borivali
+- i am living in madhapur
+- currently living in mumbai
+- i am in mumbai
+- this place seems to be close to hyderabad
+- i feel this place is near to borivali
+- i am near to chennai
+- i think i am near to mumbai
+- i am looking for restaurants in mumbai
+- i am living in hyderabad
 
 ## intent:telling_location_cuisine
 - i am looking for some [chinese](cuisine) food in mumbai

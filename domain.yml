@@ -48,8 +48,14 @@ templates:
   utter_nosuch_cuisine_all_restaurants:
   - text: We dint find any such cuisine that you are looking for.We will help you
       by providing all the avaiable restaurants.
-  utter_default:
-  - text: Sorry i din't get you...
+  utter_location_denied:
+  - text: Sorry i can't help without the location...please ask someone near you about
+      your current location
+  utter_tryAfter_sometime:
+  - text: Sorry can't help without your location,try after some time once you have
+      the idea about location
+  utter_affirm_cuisine:
+  - text: Thanks for sharing your cuisine
 actions:
 - utter_greet
 - utter_did_that_help
@@ -62,15 +68,12 @@ actions:
 - utter_ask_location_cuisine
 - action_show_restaurants
 - action_set_location
-- action_set_cuisine
 - action_get_cuisine_show_restaurants
 - utter_sorry
 - action_restaurants_nocuisine
 - utter_itsok
 - utter_enter_cuisine_again
 - utter_nosuch_cuisine_all_restaurants
-- action_location_denied
-- action_try_Aftersometime
-- utter_tryafter_sometime
-- utter_default
-- action_default_fallback
+- utter_location_denied
+- utter_tryAfter_sometime
+- utter_affirm_cuisine
