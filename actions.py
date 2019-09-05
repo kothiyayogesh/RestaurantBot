@@ -29,9 +29,8 @@ class Zomato:
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
         r = requests.get(self.base_url+"locations",params=queryString, headers=headers)
         data=r.json()
+       # print(data)
 
-
-        
         if len(data['location_suggestions']) == 0:
             raise Exception('invalid_location')
             
@@ -123,19 +122,22 @@ class Zomato:
 class LocationExtractor:
     
     def __init__(self):
-        self.api_token="ecc6c2cc78bc4f749eb789765735b1ca"
-        self.base_url="https://api.dandelion.eu/datatxt/nex/v1/"
-    
-    def extractLocation(self,text):
-        list_cities=[]
-        params={"token":self.api_token,"min_confidence":0.75,"lang":"en"}
-        r=requests.get(self.base_url+"?text="+text+"&include=types%2Cabstract%2Ccategories",params)
-        all_locations=r.json()
+       self.bing_baseurl="http://dev.virtualearth.net/REST/v1/Locations"
+       self.bing_api_key="Aiw0X2IXCnSru_O00Rl8c8v6nULH-Z7r1HdFOVW3MQZEJoq6U2kQ_SVabSQui1GU"
+
+    def getLocationInfo(self,query):
         
-        for x in all_locations["annotations"]:
-            list_cities.append(x["label"])
+        list_cities=[]
+        queryString={"query":query,"key":self.bing_api_key}
+        r = requests.get(self.bing_baseurl,params=queryString)
+        data=r.json()
+        print(data)
+        return data["resourceSets"][0]["resources"][0]["point"]["coordinates"],data["resourceSets"][0]["resources"][0]["name"]
+        
+        #for x in all_locations["annotations"]:
+        #    list_cities.append(x["label"])
             
-        return list_cities
+        #return list_cities
 
 class ActionSetLocation(Action):
 
@@ -146,7 +148,7 @@ class ActionSetLocation(Action):
     def run(self, dispatcher,tracker,domain):
         user_input=tracker.latest_message['text']
         le=LocationExtractor()
-        location_name=le.extractLocation(str(user_input))
+        location_name=le.getLocationInfo(str(user_input))
         print(location_name)
         
         return [SlotSet("location",location_name[0])]
@@ -199,7 +201,6 @@ class GetRestaurantsWithoutCuisine(Action):
 
 class ActionShowRestaurants(Action):
 
-
     def name(self):
         return "action_show_restaurants"
 
@@ -208,7 +209,7 @@ class ActionShowRestaurants(Action):
         le=LocationExtractor()
         user_input=tracker.latest_message['text']
         cuisine_type=tracker.get_slot('cuisine')
-        location_name=le.extractLocation(str(user_input))
+        location_name=le.getLocationInfo(str(user_input))
         print(user_input)
         print(cuisine_type)
         print(location_name)
@@ -218,6 +219,3 @@ class ActionShowRestaurants(Action):
             dispatcher.utter_message(r)
 
         return []
-        
-
-   
