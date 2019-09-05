@@ -1,0 +1,247 @@
+## intent:affirm
+- yes it did,thanks a lot
+- yes it helped a lot..thanks
+- indeed
+- its ok
+- yes
+- correct
+- na
+- yup thanks
+- yes it did
+- yes thanks
+- that sounds good
+- yes thanks a lot
+
+## intent:deny
+- i am not sure
+- i am not sure about it
+- i dont know what exactly this place is
+- i am new here
+- i am not sure about my location
+- no  idea
+- dont know
+- actually i am new here so i dont know location
+- no way
+- i dont know
+- i dont know the location
+- not really
+- not sure actualy
+- no idea about it
+- nopes
+- no idea about that
+- i dont know about my location
+- not sure
+- please help me without cuisine
+- actually i really don't know please help withut location
+- i am new here i dont know location yet
+- I don't think so
+- not sure about my cuisine
+- can you help me with location i am new here
+- i am not sure of my location yet
+- no
+- i really dont know
+- dont know about cuisine
+
+## intent:goodbye
+- bye
+- see you around
+- bye meet you soon
+- goodbye
+- bye take care see you soon
+- bye see you soon
+- bbye
+- bbye meet you soon
+- bbye nice talking to you
+- bbye take care
+- bye tc
+- bye see you
+- bye talk to you later
+
+## intent:greet
+- hi
+- hey how are you
+- hey whatsup
+- good evening
+- hello bot
+- hey bot how are you
+- hi bot
+- good morning
+- hi wassup
+- hi bot are you there
+- hey are you there
+- hi whatsup
+- hey bot
+- hello
+- hello how are you
+- hii
+- hey
+- hey wassup
+
+## intent:mood_great
+- wonderful
+- fine
+- i am doing great
+- very good
+- I am feeling very good
+- I'm good
+- perfect
+- awesome
+- i am good
+- great
+- good
+- iam fine
+- I am great
+- i am great
+
+## intent:mood_unhappy
+- extremely sad
+- unhappy
+- very bad
+- so sad
+- bad
+- sad
+- not very good
+- very sad
+
+## intent:restaurant_search
+- get me some restaurants near to me
+- i am hungry please tell me some restaurants near to me
+- please tell me some food points here
+- tell me some restaurants
+- tell me some food points near to me
+- i am looking for some restaurants  near me
+- get me some restaurants
+- get me some flight details
+- get me some restaurants near by
+- looking for some restraunts
+- hey i am looking for some restaurants
+- i am hungry
+- please find me some restaurants
+- get me a list of all restaurants near to me
+- i am looking for some restaurants
+- please get me some restaurants near by
+- tell me some restaurants here
+- i am hungry get me some restaurants near by
+- please get me a list of restaurants
+- find some food places near to me
+- get me some restaurants neary by
+- i want to eat something please tell me some location near by
+- get me some restaurants please
+- please get me some restaurants
+- get me a list of restaurants near to me
+- please help me find some restaurants
+- please get me a list of restaurants near by
+- please get me a list of all restaurants near by
+- get me some restaurants near me
+- please give me a list of restaurants
+- looking for some restaurants
+- please provide me a list of restaurants
+- please get me a list of all restaurants
+- please get me all the restaurants near by
+- provide me some restaurants
+- get me few restaurants
+
+## intent:telling_cuisine
+- australian
+- i will prefer australian then
+- i would love to eat [north indian](cuisine) food
+- i would love to eat [chinese](cuisine) food
+- i would like to eat [italian](cuisine)
+- i will prefer [chinese](cuisine) food
+- i would like to have [italian](cuisine)
+- thai
+- i will prefer to eat [chinese](cuisine) food
+- i would love to eat [chinese](cuisine)
+- african
+- i will prefer australian
+- i will prefer [south indian](cuisine) food
+- i would like to eat [italian](cuisine) food
+- my choice will be [arabian](cuisine)
+- please provide me [north indian](cuisine) food
+- i need [italian](cuisine) food
+- i will prefer [italian](cuisine) food
+- i would love to eat [italian](cuisine) food
+- i would like to have [chinese](cuisine)
+- i will eat [north indian](cuisine) food
+- i would like to eat [chinese](cuisine)
+- please give me some [thai](cuisine) food
+- i would love to eat [mexican](cuisine)
+- i would like to have [chinese](cuisine) food
+- i would love to eat [arabian](cuisine) food
+- i would love to eat [south indian](cuisine) food
+- i will prefer to have [north indian](cuisine)
+- please give me [mexican](cuisine) food
+- i will eat [chinese](cuisine)
+
+## intent:telling_location
+- i am near to chennai
+- chennai
+- i feel this place is near to borivali
+- i am looking in hyderabad
+- get me some food in hyderabad
+- my location will be in mumbai
+- madhapur
+- my location will be noida
+- my location will be in borivali
+- i am currently living in mumbai
+- my area is mumbai
+- my location will be mumbai
+- i am looking to eat in mumbai
+- this place seems to be close to hyderabad
+- i am living in madhapur...
+- my prefered location will be hyderabad
+- mumbai
+- i am looking for restaurants in mumbai
+- my location is kerala
+- punjab
+- currently living in mumbai
+- my location will be chennai
+- my location will be in chennai
+- i think i am near to mumbai
+- i am looking in borivali
+- delhi
+- i am living in borivali
+- my location will be in hyderabad
+- my location is mumbai
+- i am living near borivali
+- my location is punjab
+- my prefered location is bengaluru
+- my location will be hyderabad
+- borivali
+- my location is hyderabad
+- i am living in mumbai
+- my preffered location will be bengaluru
+
+## intent:telling_location_cuisine
+- [italian](cuisine) food in hyderabad
+- i would like to eat [chinese](cuisine) in hyderabad
+- i will prefer to eat [italian](cuisine) food in mumbai
+- i would like to eat [mexican](cuisine) in kerala
+- i will need some [south indian](cuisine) food in bengaluru
+- would like to eat [mexican](cuisine) in mumbai
+- looking for [italian](cuisine) food in hyderabad
+- i am looking to eat [south indian](cuisine) food in chennai
+- i am looking for [italian](cuisine) food in madhapur
+- i am looking for [italian](cuisine) food in mumbai
+- i would love to eat [italian](cuisine) in hyderabad
+- i am looking to eat [chinese](cuisine) food in chennai
+- i would like to eat [italian](cuisine) food in delhi
+- i would like to eat [italian](cuisine) in hyderabad
+- will eat [arabian](cuisine) food in hyderabad
+- would like to eat [mexican](cuisine) in chennai
+- will eat [thai](cuisine) in hyderabad
+- i am looking for some [italian](cuisine) food in chennai
+- i am looking to eat [italian](cuisine) food in hyderabad
+- will  try [south indian](cuisine) in mumbai
+- i would like to eat [italian](cuisine) food in hyderabad
+- i am looking to eat [italian](cuisine) food in chennai
+- i would like to eat [north indian](cuisine) food in hyderabad
+- i am looking for some [chinese](cuisine) food in hyderabad
+- i would love to have [chinese](cuisine) food in chennai
+- i am looking to eat [italian](cuisine) food in delhi
+- i am looking to eat some [italian](cuisine) food in kerala
+- i am looking to eat something [chinese](cuisine) in hyderabad
+- i am looking to eat [italian](cuisine) food in mumbai
+- i would love to eat [north indian](cuisine) food in hyderabad
+- i am looking for [italian](cuisine) food in hyderabad
+- i need [chinese](cuisine) food in kerala
