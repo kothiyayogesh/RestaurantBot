@@ -138,22 +138,16 @@ class LocationExtractor:
 
     def getLocationInfo(self,query):
         
-        list_cities=[]
-
+         list_cities=[]
         queryString={"query":query,"key":self.bing_api_key}
-
         r = requests.get(self.bing_baseurl,params=queryString)
-
         data=r.json()
+        print(data)
 
-	"""
-		Yogesh: Why aren't we checking if coordinate and name key is there in dictionary. If it is not there then it will throw KeyError. Please handle this case.
-	"""
-
-        print("Coordinates are :", data["resourceSets"][0]["resources"][0]["point"]["coordinates"])
-        print("Location is :", data["resourceSets"][0]["resources"][0]["name"])
-        return data["resourceSets"][0]["resources"][0]["point"]["coordinates"],data["resourceSets"][0]["resources"][0]["name"]
-        
+        if (!data['resourceSets'][0]["resources"][0]["point"]["coordinates"] && data["resourceSets"][0]["resources"][0]["name"] ):
+            raise KeyError('invalid_location')
+        else:
+            return data["resourceSets"][0]["resources"][0]["point"]["coordinates"],data["resourceSets"][0]["resources"][0]["name"]
 
 class ActionSetLocation(Action):
 
@@ -171,35 +165,6 @@ class ActionSetLocation(Action):
         return [SlotSet("location",location_name[0])]
 
 		
-"""
-	Yogesh: This is redundant function. Functionality is same as ActionShowRestaurants. Remove this and replace all action from story and domain file.
-"""
-class ActionSetCuisine_showRestaurants(Action):
-    def name(self):
-        return "action_get_cuisine_show_restaurants"
-
-
-    def run(self, dispatcher,tracker,domain):
-
-        cuisine_type=tracker.get_slot('cuisine')
-        location_name=tracker.get_slot('location')
-
-        print("Cuisine is: ", cuisine_type)
-        print("Location is: ", location_name)
-
-        zom = Zomato()
-
-        list_all_restaurants = zom.get_all_restraunts(str(location_name),str(cuisine_type))
-        
-	"""
-		Yogesh: Rather than sending each restaurant name seperately send a proper response like this: "We found <restaurant 1>, <restaurant 2>, .. of <cuisine_name> cuisine at <location> location. Have a great time :)"
-	"""
-        for r in list_all_restaurants:
-            dispatcher.utter_message(r)
-
-        return []
- 
-
 class GetRestaurantsWithoutCuisine(Action):
 
     def name(self):
@@ -232,20 +197,25 @@ class ActionShowRestaurants(Action):
 
     def run(self, dispatcher,tracker,domain):
 
-        zo = Zomato()
-        le = LocationExtractor()
+        zo=Zomato()
+        le=LocationExtractor()
+        user_input=tracker.latest_message['text']
 
-        cuisine_type = tracker.get_slot('cuisine')
-	
-	"""
-		Yogesh: Why are we hitting Bing API again. Best practice is to check if location slot is set or not. If not then hit API. This could occur in scenrario where user says "I would like to eat Italian food in Andheri" 
-	"""
-        user_input = tracker.latest_message['text']
-        location_name = le.getLocationInfo(str(user_input))
+        locate=tracker.get_slot('location')
+        location_name=le.getLocationInfo(str(user_input))
 
-        list_all_restaurants = zo.get_all_restraunts(location_name[0],str(cuisine_type))
-        
-        for r in list_all_restaurants:
-            dispatcher.utter_message(r)
+        if locate is None:
+            dispatcher.utter_message('Sorry I can\'t Help you without location')
+        else:
+            cuisine_type=tracker.get_slot('cuisine')
+            location_name=le.getLocationInfo(str(user_input))
+            print(user_input)
+            print(cuisine_type)
+            print(location_name)
+            list_all_restaurants=zo.get_all_restraunts(location_name[0],str(cuisine_type))
+            #print(list_all_restaurants)
+            for r in list_all_restaurants:
+                dispatcher.utter_message(r)
 
+            #dispatcher.utter_message("We found" +r + "of" + cuisine_type + "cuisine at"+location_name+"location. Have a great time :)")
         return []
