@@ -1,16 +1,18 @@
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- restaurant_search
-- telling_location_cuisine
-- telling_location
-- telling_cuisine
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - restaurant_search
+  - telling_location_cuisine
+  - telling_location
+  - telling_cuisine
+
 entities:
-- cuisine
+  - cuisine
+
 slots:
   cuisine:
     type: text
@@ -18,62 +20,56 @@ slots:
     type: text
 templates:
   utter_greet:
-  - text: Hey! How are you?
+  	- text: Hey! How are you?
   utter_did_that_help:
-  - text: Did that help you?
+  	- text: Did that help you?
   utter_assist:
-  - text: Great ! How may i assist you?
+  	- text: Great ! How may i assist you?
   utter_ask_location_cuisine:
-  - text: Please share your location and cuisine.
+  	- text: Please share your location and cuisine you would like to have.
   utter_ask_location:
-  - text: Please share your location.
+  	- text: Can you please help me with your location?
   utter_ask_cuisine:
-  - text: Please share your cuisine.
+  	- text: What cuisine you would like to binge :P.
   utter_affirm_info:
-  - text: Thanks for sharing the valuable information, please give me some time to
-      find out... \n
+  	- text: Thanks for sharing the valuable information, let me check what I can find for you... \n
   utter_affirm_location:
-  - text: Thanks for sharing your location..
+  	- text: Thanks for sharing your location.
   utter_goodbye:
-  - text: Bye
-  utter_sorry:
-  - text: sorry i may not help you without your location.Kindly find your location
-      with some person near to you.Thanks have a nice day
+  	- text: Bye. Have a great time.
+  	- text: Bye Bye. See you soon.
   utter_itsok:
-  - text: It's completely fine ,i will try to fetch all types of restaurants.Choose
-      among them
+  	- text: It's completely fine ,I will try to get all types of restaurants for you. Choose the one you like :)
   utter_enter_cuisine_again:
-  - text: Sorry we couldn't find any {cuisine} cuisine in {location}. Would you like
-      to check some other cuisine?
+  	- text: Sorry we couldn't find any {cuisine} cuisine in {location}. Would you like to check some other cuisine?
   utter_nosuch_cuisine_all_restaurants:
-  - text: We dint find any such cuisine that you are looking for.We will help you
-      by providing all the avaiable restaurants.
+  	- text: We dint find any such cuisine that you are looking for. We will help you by providing all the available restaurants.
   utter_location_denied:
-  - text: Sorry i can't help without the location...please ask someone near you about
-      your current location
+  	- text: I am sorry I can't help you without location. You can find out the location and share with me else visit https://www.zomato.com/
   utter_tryAfter_sometime:
-  - text: Sorry can't help without your location,try after some time once you have
-      the idea about location
+  	- text: I am really sorry I can't help without the location. Please visit https://www.zomato.com/
+  	- text: Sorry to disappoint you mate because I can't help you without location. Please visit https://www.zomato.com/
   utter_affirm_cuisine:
-  - text: Thanks for sharing your cuisine
+	- text: Ahh, Thanks for sharing the cuisine. You have got a good taste :D
+	- text: Thanks mate, Even I like {cuisine}.
+
 actions:
-- utter_greet
-- utter_did_that_help
-- utter_goodbye
-- utter_affirm_info
-- utter_affirm_location
-- utter_assist
-- utter_ask_location
-- utter_ask_cuisine
-- utter_ask_location_cuisine
-- action_show_restaurants
-- action_set_location
-- action_get_cuisine_show_restaurants
-- utter_sorry
-- action_restaurants_nocuisine
-- utter_itsok
-- utter_enter_cuisine_again
-- utter_nosuch_cuisine_all_restaurants
-- utter_location_denied
-- utter_tryAfter_sometime
-- utter_affirm_cuisine
+  - utter_greet
+  - utter_did_that_help
+  - utter_goodbye
+  - utter_affirm_info
+  - utter_affirm_location
+  - utter_assist
+  - utter_ask_location
+  - utter_ask_cuisine
+  - utter_ask_location_cuisine
+  - action_show_restaurants
+  - action_set_location
+  - action_get_cuisine_show_restaurants
+  - action_restaurants_nocuisine
+  - utter_itsok
+  - utter_enter_cuisine_again
+  - utter_nosuch_cuisine_all_restaurants
+  - utter_location_denied
+  - utter_tryAfter_sometime
+  - utter_affirm_cuisine
