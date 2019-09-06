@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -220,7 +219,7 @@ class ActionShowRestaurants(Action):
             dispatcher.utter_message(r)
 
         return []
-=======
+
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -442,4 +441,3 @@ class ActionShowRestaurants(Action):
             dispatcher.utter_message(r)
 
         return []
->>>>>>> 56a42e24a9a1c9f7248d481f7b99d5c5f609af71
