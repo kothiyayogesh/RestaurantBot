@@ -20,11 +20,11 @@ slots:
     type: text
 templates:
   utter_greet:
-  	- text: Hey! How are you?
+  	- text: Hey! 
   utter_did_that_help:
   	- text: Did that help you?
   utter_assist:
-  	- text: Great ! How may i assist you?
+  	- text: Great ! I can help you to find restaurants based your preferred location and cuisine.
   utter_ask_location_cuisine:
   	- text: Please share your location and cuisine you would like to have.
   utter_ask_location:
