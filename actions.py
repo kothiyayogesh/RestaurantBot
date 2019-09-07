@@ -33,10 +33,7 @@ class Zomato:
 
         data=r.json()
 
-	"""
-		Yogesh: When does the location_suggestions are empty? I see when location is not valid it return empty list. First of all this condition should have been checked during Bing API
-		
-	"""
+	## Yogesh: When does the location_suggestions are empty? I see when location is not valid it return empty list. First of all this condition should have been checked during Bing API
         if len(data['location_suggestions']) == 0:
             raise Exception('invalid_location')
             
@@ -91,9 +88,6 @@ class Zomato:
         location_info=self.getLocationInfo(location)
         cuisine_id=self.get_cuisine_id(cuisine,location_info)
 
-        print(location_info)
-        print(cuisine_id)
-
         queryString={"entity_type":location_info[3], "entity_id":location_info[2], "cuisines":cuisine_id, "count":5}
 
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
@@ -125,7 +119,6 @@ class Zomato:
         for rest in list_ofall_rest:
             names_of_all_rest.append(rest["restaurant"]["name"])
 
-
         return names_of_all_rest
 
 
@@ -136,18 +129,18 @@ class LocationExtractor:
        self.bing_baseurl="http://dev.virtualearth.net/REST/v1/Locations"
        self.bing_api_key="Aiw0X2IXCnSru_O00Rl8c8v6nULH-Z7r1HdFOVW3MQZEJoq6U2kQ_SVabSQui1GU"
 
-    def getLocationInfo(self,query):
+    def getLocationInfo(self, query, tracker):
         
-         list_cities=[]
-        queryString={"query":query,"key":self.bing_api_key}
-        r = requests.get(self.bing_baseurl,params=queryString)
-        data=r.json()
-        print(data)
-
-        if (!data['resourceSets'][0]["resources"][0]["point"]["coordinates"] && data["resourceSets"][0]["resources"][0]["name"] ):
-            raise KeyError('invalid_location')
-        else:
-            return data["resourceSets"][0]["resources"][0]["point"]["coordinates"],data["resourceSets"][0]["resources"][0]["name"]
+       list_cities=[]
+       queryString={"query":query,"key":self.bing_api_key}
+       r = requests.get(self.bing_baseurl,params=queryString)
+       data = r.json()
+       
+       if (r.status_code != 200) :
+           dispatcher.utter_template('utter_ask_location', tracker)
+           return []
+       else:
+           return data["resourceSets"][0]["resources"][0]["point"]["coordinates"],data["resourceSets"][0]["resources"][0]["name"]
 
 class ActionSetLocation(Action):
 
@@ -160,9 +153,9 @@ class ActionSetLocation(Action):
         user_input=tracker.latest_message['text']
 
         le = LocationExtractor()
-        location_name = le.getLocationInfo(str(user_input))
+        location_name = le.getLocationInfo(str(user_input), tracker)
 
-        return [SlotSet("location",location_name[0])]
+        return [SlotSet("location",location_name)]
 
 		
 class GetRestaurantsWithoutCuisine(Action):
@@ -179,11 +172,14 @@ class GetRestaurantsWithoutCuisine(Action):
 
         list_all_restaurants = zom.get_all_restraunts_without_cuisne(str(location_name))
         
-	"""
-		Yogesh: Rather than sending each restaurant name seperately send a proper response like this: "We found <restaurant 1>, <restaurant 2>, .. at <location> location. Have a great time :)"
-	"""
-        for r in list_all_restaurants:
-            dispatcher.utter_message(r)
+        temp_str = ""
+        
+        for r in range(0,len(list_all_restaurants)-1):
+        	temp_str = temp_str + str(list_all_restaurants[r]) + ", "
+        
+        temp_str = temp_str + "and " + str(list_all_restaurants[-1])
+
+        dispatcher.utter_message("We found " + str(temp_str) + " at " + location_name[1] +" location. Have a great time :)")
 
         return []
 
@@ -197,25 +193,27 @@ class ActionShowRestaurants(Action):
 
     def run(self, dispatcher,tracker,domain):
 
-        zo=Zomato()
-        le=LocationExtractor()
-        user_input=tracker.latest_message['text']
+        zo = Zomato()
+        le = LocationExtractor()
+        user_input = tracker.latest_message['text']
 
-        locate=tracker.get_slot('location')
-        location_name=le.getLocationInfo(str(user_input))
+        location_name = tracker.get_slot('location')
+        if (not location_name) :
+            location_name = le.getLocationInfo(str(user_input), tracker)
 
-        if locate is None:
-            dispatcher.utter_message('Sorry I can\'t Help you without location')
+        if not location_name :
+            ### Utter template
+            dispatcher.utter_template('utter_ask_location', tracker)
         else:
             cuisine_type=tracker.get_slot('cuisine')
-            location_name=le.getLocationInfo(str(user_input))
-            print(user_input)
-            print(cuisine_type)
-            print(location_name)
             list_all_restaurants=zo.get_all_restraunts(location_name[0],str(cuisine_type))
-            #print(list_all_restaurants)
-            for r in list_all_restaurants:
-                dispatcher.utter_message(r)
+            temp_str = ""
+            
+            for r in range(0,len(list_all_restaurants)-1):
+            	temp_str = temp_str + str(list_all_restaurants[r]) + ", "
+            
+            temp_str = temp_str + "and " + str(list_all_restaurants[-1])
 
-            #dispatcher.utter_message("We found" +r + "of" + cuisine_type + "cuisine at"+location_name+"location. Have a great time :)")
+            dispatcher.utter_message("We found " + str(temp_str) + " of " + cuisine_type + " cuisine at "+ location_name[1] +" location. Have a great time :)")
+
         return []
