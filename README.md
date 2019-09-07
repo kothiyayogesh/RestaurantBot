@@ -71,6 +71,7 @@ After the key has been created we can see/ copy it by clicking on ‘My Account�
 Now, we have what we needed to start with. Let’s dive in to Postman and get the stuff working.
 
 Look at the below self-explanatory state diagram which shows conversation flow with all required states.
+![Conversation diagram](https://drive.google.com/open?id=0B8VyXj56P9UiOVpLX2RNR1hlb3J4UE1jdnh0Z3ExeDFCWkRJ)
 
 ### What is Rasa?
 [Rasa](https://rasa.com/docs/rasa/) is an open-source machine learning framework for building [contextual AI assistants and chatbots](https://blog.rasa.com/level-3-contextual-assistants-beyond-answering-simple-questions/).  
@@ -127,8 +128,11 @@ Also read this in-depth information about NLU here: https://blog.rasa.com/rasa-n
 Core policy
 Till now we saw how chatbot understands the user sentence and classifies to proper intent and extract entities. 
 But we humans follow natural conversation where we remember context and reply accordingly. Otherwise, it will look something like this. Frustrating 😠 isn't it?
+![Conversation diagram](https://lh3.googleusercontent.com/ymb8CbApXrzsT-tvxHVqew4G5sNulGi7v3TWGbAS29WSVQK_bSf4wGzV9Yzf4V8FlGul2nSEJK-F14MHvnuWlYq04TNGMYaPQNqXptip)
 
 So how does rasa handles all this? It is done through various elements of the RASA. Let’s look at the architecture of the RASA.
+![Conversation diagram](https://lh4.googleusercontent.com/vglDus-TNUadCP-JJvCHOGwUkn4NdTD6balsubtO-Q9CO6nlR1u1x8egD_dWZSNSmf98ArqjCYVhCxZAfZ_RrJOM-Dx1cn56N5oAiWoPMc35LYY2DS0uVyz1W5DsIQzkfU23Bcob)
+
 
 Here Interpreter is part of NLU and Tracker, policy and action are part of Core.
 * The message is passed to an Interpreter, which converts it into a dictionary including the original text, the intent, and any entities that were found.
