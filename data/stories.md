@@ -18,7 +18,6 @@
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 * goodbye
@@ -32,7 +31,6 @@
 * telling_location_cuisine{"cuisine":"italian"}
     - slot{"cuisine":"italian"}
     - action_show_restaurants
-    - utter_did_that_help
 * goodbye
 
 ## restaurantSearch_tellingLocation_tellingCuisine
@@ -47,7 +45,6 @@
 * telling_cuisine{"cuisine":"italian"}
     - slot{"cuisine":"italian"}
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 
@@ -55,9 +52,7 @@
 
 * telling_location_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
-    - utter_affirm_info
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 
@@ -79,7 +74,6 @@
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 
@@ -97,7 +91,6 @@
 * telling_cuisine{"cuisine":"south indian"}
     - slot{"cuisine":"south indian"}
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 
@@ -117,7 +110,6 @@
 * deny
     - utter_itsok
     - action_restaurants_nocuisine
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 
@@ -145,7 +137,6 @@
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
 
@@ -158,8 +149,6 @@
 * telling_location
     - action_set_location
     - slot{"location":"Hyderabad"}
-    - utter_affirm_info
     - action_show_restaurants
-    - utter_did_that_help
 * affirm
     - utter_goodbye
