@@ -17,7 +17,7 @@
     - utter_ask_cuisine
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
-    - action_get_cuisine_show_restaurants
+    - action_show_restaurants
     - utter_did_that_help
 * affirm
     - utter_goodbye
@@ -46,7 +46,7 @@
     - utter_ask_cuisine
 * telling_cuisine{"cuisine":"italian"}
     - slot{"cuisine":"italian"}
-    - action_get_cuisine_show_restaurants
+    - action_show_restaurants
     - utter_did_that_help
 * affirm
     - utter_goodbye
@@ -78,7 +78,7 @@
     - utter_ask_cuisine
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
-    - action_get_cuisine_show_restaurants
+    - action_show_restaurants
     - utter_did_that_help
 * affirm
     - utter_goodbye
@@ -96,7 +96,7 @@
     - utter_ask_cuisine
 * telling_cuisine{"cuisine":"south indian"}
     - slot{"cuisine":"south indian"}
-    - action_get_cuisine_show_restaurants
+    - action_show_restaurants
     - utter_did_that_help
 * affirm
     - utter_goodbye
@@ -144,7 +144,7 @@
     - utter_ask_cuisine
 * telling_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
-    - action_get_cuisine_show_restaurants
+    - action_show_restaurants
     - utter_did_that_help
 * affirm
     - utter_goodbye
