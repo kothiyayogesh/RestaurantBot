@@ -184,10 +184,10 @@ Keep the all intents mutually exclusive and diversity in its utterance.
 * Write an endpoint.yml file - this file contains the different endpoints which your bot can connect to. Like tracker store, events, actions, etc.
 
 Now it’s time to train the bot. 
-Execute below command and explore this for more training options: https://rasa.com/docs/rasa/user-guide/command-line-interface/#train-a-model
+Execute below command and explore this for more training options: https://rasa.com/docs/rasa/user-guide/command-line-interface/#train-a-model  
 `rasa train`
 Let’s see how bot performs with limited training data and let’s explore rasa x and improve it.
-Run the following command in every new tab.
+Run the following command in every new tab.  
 `rasa run actions`
 `rasa x`
 Open rasa x for testing and improving the story through interactive learning. Check [Juste's video intro to Rasa X](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be) for more information.
