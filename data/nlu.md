@@ -175,6 +175,8 @@
 - i am looking for some food points
 - i am looking for restaurants
 - get me some flight details
+- ok get me some restaurants nearby
+- get me some restaurants nearby
 
 ## intent:telling_cuisine
 - i would prefer to eat [mexican](cuisine)
@@ -307,3 +309,4 @@
 - i am looking to eat some [italian](cuisine) food in chennai
 - i am looking to eat some [italian](cuisine) food in kerala
 - i would love to have [chinese](cuisine) food in chennai
+- looking to eat [chinese](cuisine) food in faridabad

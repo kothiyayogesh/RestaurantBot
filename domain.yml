@@ -14,12 +14,15 @@ entities:
 slots:
   cuisine:
     type: text
-  location:
+  latitude:
+    type: text
+  location_name:
+    type: text
+  longitude:
     type: text
 templates:
   utter_greet:
-  - text: Hey!! I can help you to find restaurants based your preferred location and
-      cuisine.
+  - text: Hey ! How are you
   utter_did_that_help:
   - text: Did that help you?
   utter_assist:
