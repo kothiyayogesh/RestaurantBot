@@ -206,7 +206,8 @@ class ActionShowRestaurants(Action):
         location_name = tracker.get_slot('location_name')
         latitude=tracker.get_slot('latitude')
         longitude=tracker.get_slot('longitude')
-
+	
+	#i don't understand why these two if's are used...
         if (not location_name) :
             location_name = le.getLocationInfo(str(user_input), tracker)
 
