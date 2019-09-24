@@ -176,7 +176,7 @@ class GetRestaurantsWithoutCuisine(Action):
         
         zom = Zomato()
 
-        list_all_restaurants = zom.get_all_restraunts_without_cuisne(str(location_name),int(latitude),int(longitude))
+        list_all_restaurants = zom.get_all_restraunts_without_cuisne(str(location_name),float(latitude),float(longitude))
         
         temp_str = ""
         
@@ -216,7 +216,7 @@ class ActionShowRestaurants(Action):
             dispatcher.utter_template('utter_ask_location', tracker)
         else:
             cuisine_type=tracker.get_slot('cuisine')
-            list_all_restaurants=zo.get_all_restraunts(str(location_name),int(latitude),int(longitude),str(cuisine_type))
+            list_all_restaurants=zo.get_all_restraunts(str(location_name),float(latitude),float(longitude),str(cuisine_type))
             temp_str = ""
             
             for r in range(0,len(list_all_restaurants)-1):
