@@ -421,21 +421,9 @@
 - pubs
 - bars
 
-## synonym:Pubs & bars
-- Pubs
-- Bars
 
-## synonym:arabian
-- Arabian
 
-## synonym:asian
-- Asian
 
-## synonym:assamese
-- Assamese
-
-## synonym:belgian
-- Belgian
 
 ## synonym:chinese
 - Momos
@@ -449,16 +437,6 @@
 
 ## synonym:italian
 - pizza
-- Italian
 
-## synonym:japanese
-- Japanese
 
-## synonym:korean
-- Korean
 
-## synonym:maharashtrian
-- Maharashtrian
-
-## synonym:malaysian
-- Malaysian
