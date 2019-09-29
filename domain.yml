@@ -9,9 +9,13 @@ intents:
 - telling_location_cuisine
 - telling_location
 - telling_cuisine
+- telling_category
 entities:
 - cuisine
+- category
 slots:
+  category:
+    type: text
   cuisine:
     type: text
   latitude:
@@ -61,6 +65,14 @@ templates:
   utter_affirm_cuisine:
   - text: Ahh, Thanks for sharing the cuisine. You have got a good taste :D
   - text: Thanks mate, Even I like {cuisine}.
+  utter_thanks:
+  - text: I hope you got what you were looking for,if not try me once more.
+  utter_ask_category:
+  - text: Would you like to try any specific category like 'Delivery', 'Dine-out',
+      'Nightlife', 'Takeaway', 'Cafes', 'Pubs & Bars', 'Pocket Friendly Delivery',
+      'Clubs & Lounges'
+  utter_affirm_category:
+  - text: Thanks for sharing the category,let me find some good restaurants for you.
 actions:
 - utter_greet
 - utter_did_that_help
@@ -73,10 +85,14 @@ actions:
 - utter_ask_location_cuisine
 - action_show_restaurants
 - action_set_location
-- action_restaurants_nocuisine
+- action_restaurants_nocuisine_nocat
+- action_restaurants_nocuisine_withCategory
 - utter_itsok
 - utter_enter_cuisine_again
 - utter_nosuch_cuisine_all_restaurants
 - utter_location_denied
 - utter_tryAfter_sometime
 - utter_affirm_cuisine
+- utter_thanks
+- utter_ask_category
+- utter_affirm_category
