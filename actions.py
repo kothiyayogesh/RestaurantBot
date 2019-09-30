@@ -13,7 +13,7 @@ import ast
 class Zomato:
 
     def __init__(self):
-        self.api_key="797e936d8ac687c396be2fec2a356217"  ## Update Zomato API key here
+        self.api_key=""  ## Update Zomato API key here
         self.base_url = "https://developers.zomato.com/api/v2.1/"
 
 
@@ -159,7 +159,7 @@ class LocationExtractor:
     def __init__(self):
 
         self.bing_baseurl="http://dev.virtualearth.net/REST/v1/Locations"
-        self.bing_api_key="Aiw0X2IXCnSru_O00Rl8c8v6nULH-Z7r1HdFOVW3MQZEJoq6U2kQ_SVabSQui1GU" ## Update Bing API key here
+        self.bing_api_key="" ## Update Bing API key here
 
     def getLocationInfo(self, query, tracker):
 
@@ -214,12 +214,23 @@ class GetRestaurantsWithoutCuisine(Action):
         list_all_restaurants = zom.get_all_restraunts_without_cuisne(str(location_name),float(latitude),float(longitude))
         
         
-        dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
+        # dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
 
-        i=1
-        for res in list_all_restaurants:
-            dispatcher.utter_message(str(i)+" ) "+res)
-            i+=1
+        # i=1
+        # for res in list_all_restaurants:
+        #     dispatcher.utter_message(str(i)+" ) "+res)
+        #     i+=1
+
+        temp_str = ""
+        
+        for r in range(0,len(list_all_restaurants)-1):
+        	temp_str = temp_str + str(list_all_restaurants[r]) + ", "
+        
+        temp_str = temp_str + "and " + str(list_all_restaurants[-1])
+
+        dispatcher.utter_message("We found " + str(temp_str) + " at " + location_name +" location. Have a great time :)")
+
+
         return []
 
 
@@ -248,12 +259,22 @@ class GetRestaurantsWithoutCuisineWithCategory(Action):
             
         
         
-        dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
+        # dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
 
-        i=1
-        for res in list_all_restaurants:
-            dispatcher.utter_message(str(i)+" ) "+res)
-            i+=1
+        # i=1
+        # for res in list_all_restaurants:
+        #     dispatcher.utter_message(str(i)+" ) "+res)
+        #     i+=1
+
+        temp_str = ""
+        
+        for r in range(0,len(list_all_restaurants)-1):
+        	temp_str = temp_str + str(list_all_restaurants[r]) + ", "
+        
+        temp_str = temp_str + "and " + str(list_all_restaurants[-1])
+
+        dispatcher.utter_message("We found " + str(temp_str) + " at " + location_name +" location. Have a great time :)")
+
         return []
 
 
@@ -302,14 +323,18 @@ class ActionShowRestaurants(Action):
 
             
 
-            dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
+            # dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
 
-            i=1
-            for res in list_all_restaurants:
-            	dispatcher.utter_message(str(i)+" ) "+res)
-            	i+=1
-            
+            # i=1
+            # for res in list_all_restaurants:
+            # 	dispatcher.utter_message(str(i)+" ) "+res)
+            # 	i+=1
+        
 
-            #dispatcher.utter_message("We found " + str(temp_str) + " of " + cuisine_type + " cuisine at "+ location_name +" location. Have a great time :)")
+        	for r in range(0,len(list_all_restaurants)-1):
+            	temp_str = temp_str + str(list_all_restaurants[r]) + ", "    
+        
+            temp_str = temp_str + "and " + str(list_all_restaurants[-1])
+        	dispatcher.utter_message("We found " + str(temp_str) + " of " + cuisine_type + " cuisine at "+ location_name +" location. Have a great time :)")
 
         return []
