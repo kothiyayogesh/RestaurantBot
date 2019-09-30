@@ -84,7 +84,25 @@ class Zomato:
         location_info=self.getLocationInfo(location_name,latitude,longitude)
         cuisine_id=self.get_cuisine_id(cuisine,location_info,latitude,longitude)
 
-        queryString={"lat":latitude,"lon":longitude,"entity_type":location_info[2], "entity_id":location_info[1], "cuisines":cuisine_id, "count":5}
+        queryString={"lat":latitude,"lon":longitude,"entity_type":location_info[2], "entity_id":location_info[1], "cuisines":cuisine_id, "count":10}
+
+        headers = {'Accept': 'application/json', 'user-key': self.api_key}
+        r = requests.get(self.base_url + "search",params=queryString, headers=headers)
+
+        list_ofall_rest=r.json()["restaurants"]
+
+        names_of_all_rest=[]
+        for rest in list_ofall_rest:
+            names_of_all_rest.append(rest["restaurant"]["name"])
+
+        return names_of_all_rest
+
+    def get_all_restraunts_catId(self,location_name,latitude,longitude,cuisine,cat_id):
+
+        location_info=self.getLocationInfo(location_name,latitude,longitude)
+        cuisine_id=self.get_cuisine_id(cuisine,location_info,latitude,longitude)
+
+        queryString={"category":cat_id,"lat":latitude,"lon":longitude,"entity_type":location_info[2], "entity_id":location_info[1], "cuisines":cuisine_id, "count":10}
 
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
         r = requests.get(self.base_url + "search",params=queryString, headers=headers)
@@ -98,6 +116,7 @@ class Zomato:
         return names_of_all_rest
 
     def get_all_restraunts_without_cuisne(self,location_name,latitude,longitude):
+
         '''
         Takes city name as arguments.
         Returns a list of 5 restaurants.
@@ -105,7 +124,23 @@ class Zomato:
 
         location_info=self.getLocationInfo(location_name,latitude,longitude)
         
-        queryString={"lat":latitude,"lon":longitude,"entity_type":location_info[2],"entity_id":location_info[1],"count":5}
+        queryString={"lat":latitude,"lon":longitude,"entity_type":location_info[2],"entity_id":location_info[1],"count":10}
+
+        headers = {'Accept': 'application/json', 'user-key': self.api_key}
+        r =requests.get(self.base_url + "search",params=queryString, headers=headers)
+
+        list_ofall_rest=r.json()["restaurants"]
+        names_of_all_rest=[]
+        for rest in list_ofall_rest:
+            names_of_all_rest.append(rest["restaurant"]["name"])
+
+        return names_of_all_rest
+
+
+    def get_all_restraunts_without_cuisne_Catid(self,location_name,latitude,longitude,catid):
+        location_info=self.getLocationInfo(location_name,latitude,longitude)
+        
+        queryString={"category":catid,"lat":latitude,"lon":longitude,"entity_type":location_info[2],"entity_id":location_info[1],"count":10}
 
         headers = {'Accept': 'application/json', 'user-key': self.api_key}
         r =requests.get(self.base_url + "search",params=queryString, headers=headers)
@@ -164,7 +199,7 @@ class ActionSetLocation(Action):
 class GetRestaurantsWithoutCuisine(Action):
 
     def name(self):
-        return "action_restaurants_nocuisine"
+        return "action_restaurants_nocuisine_nocat"
 
 
     def run(self, dispatcher,tracker,domain):
@@ -178,6 +213,14 @@ class GetRestaurantsWithoutCuisine(Action):
 
         list_all_restaurants = zom.get_all_restraunts_without_cuisne(str(location_name),float(latitude),float(longitude))
         
+        
+        # dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
+
+        # i=1
+        # for res in list_all_restaurants:
+        #     dispatcher.utter_message(str(i)+" ) "+res)
+        #     i+=1
+
         temp_str = ""
         
         for r in range(0,len(list_all_restaurants)-1):
@@ -185,9 +228,55 @@ class GetRestaurantsWithoutCuisine(Action):
         
         temp_str = temp_str + "and " + str(list_all_restaurants[-1])
 
-        dispatcher.utter_message("We found " + str(temp_str) + " at " + location_name[1] +" location. Have a great time :)")
+        dispatcher.utter_message("We found " + str(temp_str) + " at " + location_name +" location. Have a great time :)")
+
 
         return []
+
+
+class GetRestaurantsWithoutCuisineWithCategory(Action):
+
+    def name(self):
+        return "action_restaurants_nocuisine_withCategory"
+
+
+    def run(self, dispatcher,tracker,domain):
+        categories={"delivery":1,"dine-out":2,"nightlife":3,"catching-up":4,"takeaway":5,"cafes":6,"daily menus":7,"breakfast":8,"lunch":9,"dinner":10,"pubs & bars":11,"pocket friendly delivery":13,"clubs & lounges":14}
+
+        location_name = tracker.get_slot('location_name')
+        latitude=tracker.get_slot('latitude')
+        longitude=tracker.get_slot('longitude')
+        category=tracker.get_slot('category')
+
+        
+        zom = Zomato()
+
+        cat_id=categories.get(category.lower())
+        print(cat_id)
+
+        list_all_restaurants=zom.get_all_restraunts_without_cuisne_Catid(str(location_name),float(latitude),float(longitude),cat_id)
+
+            
+        
+        
+        # dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
+
+        # i=1
+        # for res in list_all_restaurants:
+        #     dispatcher.utter_message(str(i)+" ) "+res)
+        #     i+=1
+
+        temp_str = ""
+        
+        for r in range(0,len(list_all_restaurants)-1):
+        	temp_str = temp_str + str(list_all_restaurants[r]) + ", "
+        
+        temp_str = temp_str + "and " + str(list_all_restaurants[-1])
+
+        dispatcher.utter_message("We found " + str(temp_str) + " at " + location_name +" location. Have a great time :)")
+
+        return []
+
 
 
 
@@ -199,6 +288,7 @@ class ActionShowRestaurants(Action):
 
     def run(self, dispatcher,tracker,domain):
 
+        categories={"delivery":1,"dine-out":2,"nightlife":3,"catching-up":4,"takeaway":5,"cafes":6,"daily menus":7,"breakfast":8,"lunch":9,"dinner":10,"pubs & bars":11,"pocket friendly delivery":13,"clubs & lounges":14}
         zo = Zomato()
         le = LocationExtractor()
         user_input = tracker.latest_message['text']
@@ -206,6 +296,8 @@ class ActionShowRestaurants(Action):
         location_name = tracker.get_slot('location_name')
         latitude=tracker.get_slot('latitude')
         longitude=tracker.get_slot('longitude')
+        category=tracker.get_slot('category')
+        cuisine_type=tracker.get_slot('cuisine')
 	
 	#i don't understand why these two if's are used...
         if (not location_name) :
@@ -214,16 +306,35 @@ class ActionShowRestaurants(Action):
         if not location_name :
             ### Utter template
             dispatcher.utter_template('utter_ask_location', tracker)
+        
         else:
-            cuisine_type=tracker.get_slot('cuisine')
-            list_all_restaurants=zo.get_all_restraunts(str(location_name),float(latitude),float(longitude),str(cuisine_type))
-            temp_str = ""
             
-            for r in range(0,len(list_all_restaurants)-1):
-            	temp_str = temp_str + str(list_all_restaurants[r]) + ", "
-            
-            temp_str = temp_str + "and " + str(list_all_restaurants[-1])
 
-            dispatcher.utter_message("We found " + str(temp_str) + " of " + cuisine_type + " cuisine at "+ location_name +" location. Have a great time :)")
+            if category is None:
+                print(category)
+                list_all_restaurants=zo.get_all_restraunts(str(location_name),float(latitude),float(longitude),str(cuisine_type))
+
+
+            else:
+                cat_id=categories.get(category.lower())
+                print(cat_id)
+
+                list_all_restaurants=zo.get_all_restraunts_catId(str(location_name),float(latitude),float(longitude),str(cuisine_type),cat_id)
+
+            
+
+            # dispatcher.utter_message("We found the top 10 rated restaurants for you !!!")
+
+            # i=1
+            # for res in list_all_restaurants:
+            # 	dispatcher.utter_message(str(i)+" ) "+res)
+            # 	i+=1
+        
+
+        	for r in range(0,len(list_all_restaurants)-1):
+            	temp_str = temp_str + str(list_all_restaurants[r]) + ", "    
+        
+            temp_str = temp_str + "and " + str(list_all_restaurants[-1])
+        	dispatcher.utter_message("We found " + str(temp_str) + " of " + cuisine_type + " cuisine at "+ location_name +" location. Have a great time :)")
 
         return []

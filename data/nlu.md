@@ -52,6 +52,12 @@
 - i dont know my location
 - dont know
 - not sure actualy
+- no idea i am new here
+- fine with anything
+- i dont know the location yet
+- anything is fine
+- i am not sure about location
+- i am fine with anything
 
 ## intent:goodbye
 - bye
@@ -177,6 +183,37 @@
 - get me some flight details
 - ok get me some restaurants nearby
 - get me some restaurants nearby
+- get me some restaurants in chennai
+- get me some restaurants i am hungry
+- i am hungry please get me some restaurants
+- need food
+- please get me pizza stores
+
+## intent:telling_category
+- get me which can [deliver](category:delivery)
+- i would like to see restaurants which can [deliver](category)
+- provide me some restaurants which provide [Delivery](category) [Dine-out](category) [Nightlife](category)
+- provide me restaurants which offers [Takeaway](category) [Cafes](category) [Pubs](category:Pubs & bars) [Bars](category:Pubs & bars)
+- i will prefer [Pocket Friendly Delivery](category) restaurants
+- i would like to see [pocket friendly](category:Pocket Friendly Delivery) stores
+- i would like to [Dine-out](category)
+- ya show me some restaurants which allow [Dine-out](category)
+- show me which allows [nightlife](category:Nightlife)
+- show me which have [takeaway](category)
+- show me which have [Dine-out](category)
+- i am interested in [cafes](category)
+- i am interested in [Delivery](category) ones
+- i would like to see [pubs](category:Pubs & Bars)
+- i would like to see [nightlife](category) ones
+- please get me [pocket freindly](category:Pocket Friendly Delivery) ones
+- i would like to check out [Pocket Friendly](category:Pocket Friendly Delivery) ones
+- i will prefer [lounges](category:Clubs & Lounges)
+- i will prefer [clubs](category:Clubs & Lounges)
+- i would like to try [takeaway](category) ones
+- i would like to which have [nightlife](category)
+- i would like to see which have [Dine-out](category)
+- i would like to see [bars](category:Pubs & Bars)
+- i would like to try [cafes](category)
 
 ## intent:telling_cuisine
 - i would prefer to eat [mexican](cuisine)
@@ -209,7 +246,7 @@
 - i would love to eat [north indian](cuisine) food
 - [italian](cuisine)
 - [chinese](cuisine)
-- thai
+- [thai](cuisine)
 - i will prefer to eat [chinese](cuisine) food
 - i would love to eat [italian](cuisine) food
 - african
@@ -217,6 +254,43 @@
 - i will prefer australian then
 - i will prefer australian
 - i want to eat [italian](cuisine) food
+- [chinese](cuisine) please
+- i would love to eat [pizza](cuisine:italian)
+- i would like to eat [afghan](cuisine) meal
+- i would like to eat [fast food](cuisine)
+- i will eat [gujarati](cuisine) meal
+- get me some [indian](cuisine) food
+- get me some  [biryani](cuisine)
+- get me some [coffee](cuisine)
+- get me some [raw meats](cuisine)
+- get me some  [american food](cuisine)
+- get me some [british](cuisine) food
+- get me some  [bbq](cuisine)
+- i would love to eat [Bakery](cuisine) [Bengali](cuisine) [Rolls](cuisine) [European](cuisine) [French](cuisine) [Parsi](cuisine)
+- get me some [mongolian](cuisine) food
+- get me some [ice cream](cuisine)
+- get me some [beverages](cuisine)
+- get me some [kebab](cuisine)
+- get me some [continental](cuisine) food
+- i would like to eat [street food](cuisine)
+- i would like to eat [burmese](cuisine) food
+- i would like to eat [odia](cuisine) food
+- i would prefer eating [bengali](cuisine) food
+- i would like to eat [rolls](cuisine)
+- i would like to eat [bakery](cuisine)
+- i would like to eat [bengali](cuisine) food
+- i would love to eat [bengali](cuisine) food
+- get me some [bengali](cuisine) food
+- i would love to eat [Burger](cuisine) [Cafe](cuisine) [Sandwich](cuisine) [Italian](cuisine) [Finger Food](cuisine) [Arabian](cuisine) food
+- i would love to eat [Assamese](cuisine) [Korean](cuisine) [Belgian](cuisine)  [Goan](cuisine) [Wrap](cuisine) [Hyderabadi](cuisine) [Sushi](cuisine) [Mediterranean](cuisine) [Mithai](cuisine) [Vietnamese](cuisine) [Indonesian](cuisine) [Japanese](cuisine) food
+- i would love to have [ Bar Food](cuisine) [Asian](cuisine) [Maharashtrian](cuisine) [Malaysian](cuisine) [Kashmiri](cuisine) [Juices](cuisine) [Indian](cuisine) [Thai](cuisine) [Middle Eastern](cuisine) [Momos](cuisine:chinese) [Mangalorean](cuisine) [Spanish](cuisine) food
+- get me some [vietnamese](cuisine) food
+- i would love to eat [momos](cuisine:chinese)
+- get me some [korean](cuisine) food
+- need [italian](cuisine) food
+- i would like to try [chinese](cuisine) food
+- get me some [Sri Lankan](cuisine) [Sea food](cuisine) [Mexican](cuisine) [Desserts](cuisine) [North Indian](cuisine) [Awadhi](cuisine) [Bihari](cuisine) [Mishti](cuisine) [Turkish](cuisine) [Tibetan](cuisine) [Cantonese](cuisine) [Rajasthani](cuisine) [Salad  ](cuisine)[Paan](cuisine)
+- i would like to eat [Konkan](cuisine) [Russian](cuisine) [Bubble Tea](cuisine) [Nepalese](cuisine) [Bangladeshi](cuisine) [Singaporean](cuisine) [Fried Chicken](cuisine)[Fried](category) Chicken [Mughlai](cuisine) [Kerala](cuisine) [Greek](cuisine) [Steak](cuisine) [Lucknowi](cuisine) [Roast Chicken](cuisine) [Andhra](cuisine) [Lebanese](cuisine) food
 
 ## intent:telling_location
 - my preffered location will be bengaluru
@@ -266,6 +340,19 @@
 - i think i am near to mumbai
 - i am looking for restaurants in mumbai
 - i am living in hyderabad
+- i think i am nearby hyderabad
+- get me some restaurants in mumbai
+- i would like to eat something in mumbai
+- yes i live in borivali
+- i am in hyderabad
+- ya i am living in hyderabad
+- yes i am living in hyderabad
+- hey i am looking to eat something in chennai
+- i am living near to borivali
+- yes i am living in borivali
+- kolkata
+- i am near to hyderabad
+- living in thane
 
 ## intent:telling_location_cuisine
 - i am looking for some [chinese](cuisine) food in mumbai
@@ -310,3 +397,46 @@
 - i am looking to eat some [italian](cuisine) food in kerala
 - i would love to have [chinese](cuisine) food in chennai
 - looking to eat [chinese](cuisine) food in faridabad
+- i am looking for [italian](cuisine) food in thane
+- i would love to eat [chinese](cuisine) food in delhi
+- i would love to eat [chinese](cuisine) food in mumbai
+- i am looking to eat [italian](cuisine) food in lajpat nagar
+- i am looking to eat [chinese](cuisine) food in faridabad
+- i would like to eat [italian](cuisine) food in mumbai
+
+## synonym:Clubs & Lounges
+- lounges
+- clubs
+
+## synonym:Nightlife
+- nightlife
+
+## synonym:Pocket Friendly Delivery
+- pocket friendly
+- pocket freindly
+- Pocket Friendly
+- cheap
+
+## synonym:Pubs & Bars
+- pubs
+- bars
+
+
+
+
+
+## synonym:chinese
+- Momos
+- momos
+
+## synonym:delivery
+- deliver
+
+## synonym:indonesian
+- Indonesian
+
+## synonym:italian
+- pizza
+
+
+
