@@ -10,7 +10,7 @@ pipeline:
   - name: "CRFEntityExtractor"
   - name: "EntitySynonymMapper"
   - name: "SklearnIntentClassifier"
-  - name: "ner_duckling_http"
+  - name: "DucklingHTTPExtractor"
     url: "http://0.0.0.0:8000"
     dimensions: ["time","number"]
     locale: "en_GB"

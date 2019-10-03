@@ -411,7 +411,6 @@
 - kolkata
 - i am near to hyderabad
 - living in thane
-- kindly book a table for [2](number)[2](number)
 - get me some stores in mumbai
 - ya i am in mumbai
 - ya i am living in mumbai
