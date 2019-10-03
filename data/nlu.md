@@ -1,4 +1,12 @@
 ## intent:affirm
+- yes please
+- why not
+- yes please proceed further with booking
+- yes i would love to book
+- ya
+- ya carry on with booking
+- it would be amazing if you can do the booking here
+- oh great, please do it for me
 - yes
 - indeed
 - of course
@@ -14,6 +22,8 @@
 - yes it did
 - na
 - its ok
+- yes why not
+- yes please go ahead
 
 ## intent:deny
 - no
@@ -58,6 +68,7 @@
 - anything is fine
 - i am not sure about location
 - i am fine with anything
+- not sure about cuisine
 
 ## intent:goodbye
 - bye
@@ -188,6 +199,8 @@
 - i am hungry please get me some restaurants
 - need food
 - please get me pizza stores
+- get me some restaurants near
+- get  me some restaurants
 
 ## intent:telling_category
 - get me which can [deliver](category:delivery)
@@ -214,6 +227,20 @@
 - i would like to see which have [Dine-out](category)
 - i would like to see [bars](category:Pubs & Bars)
 - i would like to try [cafes](category)
+- [cafes](category)
+- i will prefer [cafes](category)
+- yes i would love to see [takeaway](category)
+- i would like to try [takeaway](category)
+- yes i would love to see [cafes](category)
+- yes i would love to try [cafes](category)
+- i would love to see [dine-out](category:dine - out)
+- i would love to try [cafes](category)
+- [cafes](category) please
+- [nightlife](category:) please
+- [delivery](category:) please
+- [delivery](category)
+- i would like to try [delivery](category)
+- [cafe](category:cafes)
 
 ## intent:telling_cuisine
 - i would prefer to eat [mexican](cuisine)
@@ -291,6 +318,37 @@
 - i would like to try [chinese](cuisine) food
 - get me some [Sri Lankan](cuisine) [Sea food](cuisine) [Mexican](cuisine) [Desserts](cuisine) [North Indian](cuisine) [Awadhi](cuisine) [Bihari](cuisine) [Mishti](cuisine) [Turkish](cuisine) [Tibetan](cuisine) [Cantonese](cuisine) [Rajasthani](cuisine) [Salad  ](cuisine)[Paan](cuisine)
 - i would like to eat [Konkan](cuisine) [Russian](cuisine) [Bubble Tea](cuisine) [Nepalese](cuisine) [Bangladeshi](cuisine) [Singaporean](cuisine) [Fried Chicken](cuisine)[Fried](category) Chicken [Mughlai](cuisine) [Kerala](cuisine) [Greek](cuisine) [Steak](cuisine) [Lucknowi](cuisine) [Roast Chicken](cuisine) [Andhra](cuisine) [Lebanese](cuisine) food
+- i would prefer [chinese](cuisine) food
+- [italian](cuisine) please
+- [chinese](cuisine) food
+- get me some [chinese](cuisine) food
+- get me some [italian](cuisine) food please
+- i would love to eat some [italian](cuisine) food
+- [chinese](cuisine) food please
+- [italian](cuisine) food
+- i will prefer [north indian](cuisine) food
+- i would like to eat [north indian](cuisine) food
+- i would prefer to eat [chinese](cuisine) food
+- [north indian](cuisine) food
+
+## intent:telling_datetime
+- please book for tomorrow
+- please book for [tomorrow 8 pm](time:2019-10-02T20:00:00.000+00:00)
+- tomorrow please
+- tomorrow evening
+- day after tomorrow please
+- please book for 10 october 2019
+- book for 1 january 2020
+- i would like to book for next week
+- please book for next week
+- can you please book for today itself
+- please book it for [tomorrow](time:2019-10-02T00:00:00.000+00:00)
+- book it for [tomorrow](time:2019-10-02T00:00:00.000+00:00) please
+- book it for [tomorrow](time:2019-10-03T00:00:00.000+00:00)
+- book for [tomorrow](time:2019-10-03T00:00:00.000+00:00)[tomorrow](time:2019-10-04T00:00:00.000+00:00)
+- book it for [today](time:2019-10-03T00:00:00.000+00:00)
+- book it for [today](time:2019-10-03T00:00:00.000+00:00) only
+- book for [friday 8 pm](time:2019-10-04T20:00:00.000+00:00)
 
 ## intent:telling_location
 - my preffered location will be bengaluru
@@ -353,6 +411,13 @@
 - kolkata
 - i am near to hyderabad
 - living in thane
+- kindly book a table for [2](number)[2](number)
+- get me some stores in mumbai
+- ya i am in mumbai
+- ya i am living in mumbai
+- i am in delhi
+- yes i am in punjab
+- show me some restaurants in mumbai
 
 ## intent:telling_location_cuisine
 - i am looking for some [chinese](cuisine) food in mumbai
@@ -403,6 +468,78 @@
 - i am looking to eat [italian](cuisine) food in lajpat nagar
 - i am looking to eat [chinese](cuisine) food in faridabad
 - i would like to eat [italian](cuisine) food in mumbai
+- get me some [italian](cuisine) food in chennai
+- get me some [italian](cuisine) food in mumbai
+- i am looking to eat [chinese](cuisine) food in mumbai
+- looking for some [italian](cuisine) food in mumbai
+- i would like to eat [chinese](cuisine) food in mumbai
+- looking to eat [italian](cuisine) food in mumbai
+- looking for [chinese](cuisine) food in chennai
+
+## intent:telling_numpeople
+- please book table for 5 people
+- please book table for 10 people
+- ya plz book table for 2 people
+- table for 3 please
+- i would like to book for ten people
+- please book for five guys
+- can i have a table for two
+- book the table for [2](number) please
+- please get me a table for [2](number)[2](number)
+- kindly book a table for [2](number)[2](number)
+- book for [2](number) people
+- get me a table booking for [8](number) people
+- please get me a table for [2](number)[2](number)
+- for [5](number) people
+- please book for [6](number) people
+- table for [5](number)[5](number) please
+- table for [4](number) please
+- book a table for [6](number)[6](number) people
+- book a table for [4](number)[4](number) people
+- book a table for [6](number)[6](number) people
+- table for [5](number)[5](number) please
+- book for [7](number) people
+- [4](number) people please
+- book it for [10](number) people
+- [5](number) people
+- book for [4](number)[4](number) people
+
+## intent:telling_phoneno
+- yes please note it down, it is [8724537891](phone_no)
+- it is [1010653781](phone_no)
+- yes sure it is [9711236622](phone_no)
+- [8700981533](phone_no)
+- yes please note down it is [9711236681](phone_no)
+- yes please note it down it is [9711236681](phone_no)
+- it is [9711236681](phone_no)
+- my contact number will be [8700981613](phone_no)
+- i would like to book with the contact number [9810293859](phone_no)
+- please book with [1111111111](phone_no)
+- kindly book with [0000000000](phone_no)
+- ya please take it [2222222222](phone_no)
+- why not note it down it is [3333333333](phone_no)
+- it is [9711236610](phone_no)[9711236610](number)
+- it is [9711236610](phone_no)[9711236610](number)
+- yes it is [9711235581](phone_no)[9711235581](number)
+- yes it is [8700981566](phone_no)[8700981566](number)
+- yes it is [9711236681](phone_no)[9711236681](number)
+- yes it is [9711236681](phone_no)[9711236681](number)
+- my contact number is [9711236681](phone_no)[9711236681](number)
+- it is [9711236682](phone_no)[9711236682](number)
+- yes it is [9810293866](phone_no)[9810293866](number)
+- yes it is [9810293679](phone_no)[9810293679](number)
+- it is [9911982773](phone_no)[9911982773](number)
+- it is [9810293867](phone_no)[9810293867](number)
+- it is [8700981611](phone_no)[8700981611](number)
+- [8700981516](phone_no)[8700981516](number)
+- it is [8700981512](phone_no)[8700981512](number)
+- it is [9810293859](phone_no)[9810293859](number)
+
+## synonym:2019-10-02T00:00:00.000+00:00
+- tomorrow
+
+## synonym:2019-10-02T20:00:00.000+00:00
+- tomorrow 8 pm
 
 ## synonym:Clubs & Lounges
 - lounges
@@ -421,9 +558,21 @@
 - pubs
 - bars
 
+## synonym:Pubs & bars
+- Pubs
+- Bars
 
+## synonym:arabian
+- Arabian
 
+## synonym:asian
+- Asian
 
+## synonym:assamese
+- Assamese
+
+## synonym:belgian
+- Belgian
 
 ## synonym:chinese
 - Momos
@@ -432,11 +581,27 @@
 ## synonym:delivery
 - deliver
 
+## synonym:dine - out
+- dine-out
+
 ## synonym:indonesian
 - Indonesian
 
 ## synonym:italian
 - pizza
+- Italian
 
+## synonym:japanese
+- Japanese
 
+## synonym:korean
+- Korean
 
+## synonym:maharashtrian
+- Maharashtrian
+
+## synonym:malaysian
+- Malaysian
+
+## regex:phone_no
+- \b\d{10}\b
