@@ -2,30 +2,6 @@
 * goodbye
   - utter_goodbye
 
-## 2greet_restaurantSearch_tellingLocation_tellingCuisine_tellingCategory
-
-* greet
-    - utter_greet
-* mood_great
-    - utter_assist
-* restaurant_search
-    - utter_ask_location
-* telling_location
-    - action_set_location
-    - slot{"location_name":"Mumbai"}
-    - slot{"latitude":18.9401702881}
-    - slot{"longitude":72.8348617554}
-    - utter_affirm_location
-    - utter_ask_cuisine
-* telling_cuisine{"cuisine":"chinese"}
-    - slot{"cuisine":"chinese"}
-    - utter_ask_category
-* telling_category{"category":"cafes"}
-    - slot{"category":"cafes"}
-    - utter_affirm_category
-    - action_show_restaurants
-    - utter_thanks
-
 ## 3greet_tellingLocationCuisine_tellingCategory
 
 * greet
@@ -44,7 +20,12 @@
     - slot{"category":"cafes"}
 	- utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 4restaurantSearch_tellingLocation_tellingCuisine_tellingCategory
 
@@ -64,24 +45,34 @@
     - slot{"category":"cafes"}
 	- utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
+
 
 ## 5tellingLocationCuisine_tellingCategory
 
 * telling_location_cuisine{"cuisine":"chinese"}
     - slot{"cuisine":"chinese"}
     - action_set_location
-    - slot{"location_name":"Faridabad"}
-    - slot{"latitude":28.3924694061}
-    - slot{"longitude":77.3127593994}
+    - slot{"location_name":"Mumbai"}
+    - slot{"latitude":18.9401702881}
+    - slot{"longitude":72.8348617554}
     - utter_affirm_location
     - utter_ask_category
 * telling_category{"category":"cafes"}
     - slot{"category":"cafes"}
-	- utter_affirm_category
+    - utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
-
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 
 ## 6greet_restaurantSearch_denyLocation_tellingLocation_tellingCuisine_tellingCategory
@@ -108,7 +99,12 @@
     - slot{"category":"cafes"}
     - utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 7restaurantSearch_denyLocation_tellingLocation_tellingCuisine_tellingCategory
 
@@ -130,7 +126,12 @@
     - slot{"category":"cafes"}
     - utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 8greet_restaurantSearch_tellingLocation_denyCuisine_tellingCategory_showRestaurantsWithoutCuisine
 
@@ -154,7 +155,12 @@
     - slot{"category":"cafes"}
     - utter_affirm_category
     - action_restaurants_nocuisine_withCategory
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 9greet_restaurantSearch_denyLocation_denyLocation_bye
 
@@ -186,7 +192,12 @@
     - slot{"category":"cafes"}
     - utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 11tellingCuisine_tellingLocation_tellingCategory_showRestaurants
 
@@ -205,8 +216,12 @@
     - slot{"category":"cafes"}
     - utter_affirm_category
     - action_show_restaurants
-    - utter_thanks
-
+     - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 12greet_restaurantSearch_tellingLocation_tellingCuisine_denyCategory
 
@@ -229,7 +244,13 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
+
 
 ## 13greet_tellingLocationCuisine_denyCategory
 
@@ -248,7 +269,12 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 14restaurantSearch_tellingLocation_tellingCuisine_denyCategory
 
@@ -267,7 +293,12 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 15tellingLocationCuisine_denyCategory
 
@@ -282,8 +313,12 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
-
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 16greet_restaurantSearch_denyLocation_tellingLocation_tellingCuisine_denyCategory
 
@@ -308,9 +343,12 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
-
-
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 17restaurantSearch_denyLocation_tellingLocation_tellingCuisine_denyCategory
 
@@ -331,8 +369,12 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
-
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 18greet_restaurantSearch_tellingLocation_denyCuisine_denyCategory_showRestaurantsWithoutCuisine
 
@@ -355,8 +397,12 @@
 * deny
     - utter_itsok
     - action_restaurants_nocuisine_nocat
-    - utter_thanks
-
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 
 ## 19tellingLocation_tellingCuisine_denyCategory
 
@@ -373,5 +419,10 @@
 * deny
     - utter_itsok
     - action_show_restaurants
-    - utter_thanks
+    - utter_ask_for_booking
+* affirm
+    - tableBooking_form
+    - form{"name": "tableBooking_form"}
+    - form{"name": null}
+    - utter_slots_values
 

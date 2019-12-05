@@ -10,9 +10,15 @@ intents:
 - telling_location
 - telling_cuisine
 - telling_category
+- telling_phoneno
+- telling_numpeople
+- telling_datetime
 entities:
 - cuisine
 - category
+- number
+- phone_no
+- time
 slots:
   category:
     type: text
@@ -24,6 +30,17 @@ slots:
     type: text
   longitude:
     type: text
+  num_people:
+    type: unfeaturized
+    auto_fill: false
+  phone_no:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
+  time:
+    type: unfeaturized
+    auto_fill: false
 templates:
   utter_greet:
   - text: Hey ! How are you
@@ -73,6 +90,19 @@ templates:
       'Clubs & Lounges'
   utter_affirm_category:
   - text: Thanks for sharing the category,let me find some good restaurants for you.
+  utter_ask_for_booking:
+  - text: Would you like to do the table booking ?
+  utter_ask_num_people:
+  - text: kindly let me know for how many people you need the table..
+  utter_ask_time:
+  - text: please share the date and time at which you can arrive.
+  utter_ask_phone_no:
+  - text: kindly share your contact number on which you are reachable..
+  utter_slots_values:
+  - text: "I am going to book the restaurant using the following information:\n -\
+      \ num_people: {num_people}\n - phone_no: {phone_no}\n - time: {time}\n"
+  utter_submit:
+  - text: Thanks for all the booking information
 actions:
 - utter_greet
 - utter_did_that_help
@@ -96,3 +126,11 @@ actions:
 - utter_thanks
 - utter_ask_category
 - utter_affirm_category
+- utter_ask_for_booking
+- utter_ask_num_people
+- utter_ask_phone_no
+- utter_slots_values
+- utter_ask_time
+- utter_submit
+forms:
+- tableBooking_form
